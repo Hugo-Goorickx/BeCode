@@ -1,0 +1,9 @@
+apt update
+apt install <package>
+apt remove <package>
+apt search <package>
+
+apt update
+apt install chromium
+chromium / ./chromium
+apt remove chromium

@@ -1,0 +1,16 @@
+pour se deplacer dans les dossiers il faut utiliser cd
+pour afficher le contenu d'un repertoire faire ls
+pour avoir la position dans le pc il faut faire pwd
+
+Pour acceder au manuel sans le terminal il suffit d'aller sur internet
+
+pwd
+ls
+ls /
+cd /bin
+pwd
+cd
+
+pwd (pour memoriser l'endroit ou on se trouve)
+cd <somewhere> (pour se rendre vite fait dans le dossier)
+cd <result pwd> (pour revenir la ou on etait)

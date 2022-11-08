@@ -1,0 +1,8 @@
+man man permet d'acceder au manuel de la commande man
+taper h une fois dans le man de man permet d'avoir acces a d'autres aides
+whatis permet d'avoir acces a un resume rapide de commandes
+--help donne des inforamtions plus succintent sur le fonctionnement de la commande
+ls donne les infos du repertoire
+cp copie un fichier
+pwd donne l'endroit ou se situe
+info marche de la meem maniere que man

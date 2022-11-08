@@ -1,0 +1,17 @@
+nano <file>
+vim <file>
+
+nano/vim text.txt
+
+Ecrire dans le fichier
+    " I need to be created.
+      Just because! "
+Pour quitter et enregistrer
+    sur Vim :wq
+    sur nano :^x puis y
+
+Creer un fichier avec Vim
+    vim <file>
+
+Creer un fichier avec nano
+    nano <file>

@@ -1,0 +1,13 @@
+sudo <command>
+ls -l
+chmod
+chown
+chgrp
+
+touch <file>
+ls -l 
+chown root <file>
+chgrp root <file>
+ls -l
+chmod u+rwx g+rwx o-rwx <file>
+cat <file>

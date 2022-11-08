@@ -1,0 +1,19 @@
+cat <file>
+touch <file>
+mkdir <directory>
+mv <old> <new>
+cp <old> <new>
+mv <old_name> <new_name>
+rm <file>
+rm -r <dir> / rmdir <dir>
+
+touch one.txt
+cat one.txt
+mkdir story
+mv one.txt story/
+cp story/one.txt story/two.txt
+cat story/one.txt story/two.txt
+mv story/one.txt story/part_one.txt
+mv story/two.txt story/part_two.txt
+cat story/one.txt story/two.txt
+rm -rf story

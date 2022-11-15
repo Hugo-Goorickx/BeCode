@@ -1,0 +1,74 @@
+h1 
+{
+    color:rgb(69, 165, 42);
+    font-style: italic;
+}
+
+h2 
+{
+    color:rgb(42, 136, 165);
+}
+
+h3 
+{
+    color:rgba(165, 42, 116, 0.507);
+}
+
+h4 
+{
+    color:rgb(165, 106, 42);
+}
+
+h5 
+{
+    color:rgb(42, 165, 140);
+}
+
+.it
+{
+    font-style: italic;
+}
+
+.bettrer_tab
+{
+    text-align: center;
+    background-color: bisque;
+}
+
+table, tr, td, .bouh
+{
+    border: 1px solid;
+}
+
+.test
+{
+    cursor: crosshair;
+}
+
+ul
+{
+    list-style-type:upper-alpha;
+}
+
+li+ul
+{
+    list-style-type:lower-alpha;
+}
+
+h1, h2,h3,h4,h5
+{
+    text-decoration: underline;
+}
+
+.better_but
+{
+    background-color: rgb(116, 116, 206);
+}
+
+.better_but:hover {
+	background-color:rgba(116, 116, 206, 0.316);
+}
+.better_but:active {
+	position:relative;
+	top:1px;
+}

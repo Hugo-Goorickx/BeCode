@@ -1,58 +1,55 @@
-html,
-body
+html, body
 {
     width: 100%;
     height: 100%;
-    background-image: url("backgrd.webp");
-    overflow: hidden; /* Evite la scrollbar */
-  
-    /* Center les éléments */
+    background: url("backgrd.webp");
+    overflow: hidden;
+
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.title {
-    /* cosmétique */
+.title
+{
     font-size: 200%;
-    color: rgb(71, 71, 254);
+    color: rgb(112, 112, 249);
 
     opacity: 0;
+    animation-delay: 1s;
     animation-duration: 3s;
-    animation-name: title_anime;
-    animation-timing-function: ease-out;
+    animation-name: title;
 }
 
-@keyframes title_anime
+@keyframes title
 {
-    0%   { opacity: 0; }
-    30%  { opacity: 1; }
-    70%  { opacity: 1; }
+    30% { opacity: 1; }
+    70% { opacity: 1; }
     100% { opacity: 0; }
 }
 
-.texte 
+.texte
 {
     color: yellow;    
-    font-size: 1500%;
+    font-size: 1000%;
     text-align: center;
 
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
     width: 75%;
+    position: absolute;
+    margin-left: center;
+    margin-right: center;
     top: auto;
     bottom: 0;
     height: 100em;
 
     transform-origin: center bottom;
-    transform: perspective(1500px) rotateX(60deg);
+    transform: perspective(300px) rotateX(25deg);
 }
 
-.texte > blockquote 
+.texte > blockquote
 {
     position: absolute;
-    top: 300%;
+    top: 300%; 
 
     animation-delay: 4s;
     animation-duration: 30s;
@@ -60,11 +57,10 @@ body
     animation-timing-function: linear;
 }
 
-@keyframes texte 
-{
+@keyframes texte {
     0% { top: 100%; }
     80% { opacity: 1; }
-    100% 
+    100%
     {
         top: 0;
         opacity: 0;

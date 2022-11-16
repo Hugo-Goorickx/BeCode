@@ -4,9 +4,9 @@ body
     font-family: 'Open sans', sans-serif;
     margin-left: center;
     margin-right: center;
-    background-color: #CBC6CA;
-    /*background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,169,142,1) 35%, rgba(0,212,255,1) 100%);*/
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='223' height='223' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23aaa5a9' fill-opacity='0.61'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.61'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(13, 6, 145) 16%, rgba(144,36,108,0.4948354341736695) 51%, rgba(60,131,145,0.5) 86%), url('chat.png');
+    background-repeat: no-repeat;
     background-position: bottom right;
 }
 
@@ -22,6 +22,20 @@ table, td, tr
     margin-right: 10px;
     margin-left: 10px;
     font-weight: bold;
+}
+
+.img1, .img2
+{
+    width: 400px;
+    height: 299,5px;
+    float: left;
+}
+
+.img3
+{
+    width: 400px;
+    height: 266,5px;
+    float: left;
 }
 
 .modif

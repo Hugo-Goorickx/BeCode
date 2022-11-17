@@ -14,6 +14,9 @@ body
 
 .FlexContainer
 {
+    animation-duration: 3s;
+    animation-name: pop;
+
     /*Attribution du flex*/
     display: flex;
     flex-wrap: nowrap;
@@ -90,4 +93,16 @@ a
 {
     /*retrait du surlignage*/
     text-decoration: none;
+}
+
+@keyframes pop 
+{
+    from 
+    {
+        opacity: 0;
+    }
+    to
+    {
+        opacity: 1;
+    }
 }

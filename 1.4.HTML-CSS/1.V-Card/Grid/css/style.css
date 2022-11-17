@@ -14,6 +14,9 @@ body
 
 .div1  
 {
+    animation-duration: 3s;
+    animation-name: pop;
+
     /*Bord arrondi*/
     border: 7px hidden #000000;
     border-radius: 22px;
@@ -87,4 +90,16 @@ a
 {
     /*retrait du surlignage*/
     text-decoration: none;
+}
+
+@keyframes pop 
+{
+    from 
+    {
+        opacity: 0;
+    }
+    to
+    {
+        opacity: 1;
+    }
 }

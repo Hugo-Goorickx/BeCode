@@ -1,0 +1,66 @@
+Travail de groupe sur le markdown
+Premier contact avec conflicts merge
+
+Voici le rep https://github.com/NourEve/exercise-markdown
+
+
+# Titre : Markdown :
+
+- Référentiel : `challenge-markdown`
+- Type de défi : "Défi d'apprentissage"
+- Durée : `4 heures`
+- Stratégie de déploiement : Pages Github
+
+- Challenge d'équipe : `solo` avec interaction de groupe
+
+## Objectifs d'apprentissage
+
+- Pouvoir écrire du contenu en utilisant la syntaxe MarkDown
+- Savoir travailler et communiquer en groupe
+- Pouvoir déployer une page en ligne avec GitHub.
+
+## La mission
+
+Créez une page avec MarkDown avec le contenu décrit ci-dessous.
+
+Apportez ÉGALEMENT les modifications à votre fichier readme.md localement (sur votre ordinateur), puis validez-les et mettez-les en ligne.
+Cela vous apprendra comment mettre une page en ligne avec github.
+
+**IMPORTANT : évitez la fonctionnalité d'édition sur le site Web de github.**
+
+### Fonctionnalités indispensables
+
+* Votre nom (gros en-tête)
+* En italique une citation inspirante
+* Une photo de vous. Restez professionnel !
+
+* Moi, en une phrase (en-tête plus petit)
+
+* Créez une table avec la structure suivante :
+
+* Anniversaire : jj/mm
+* Le genre: ?
+* Couleur préférée: ?
+* Nourriture favorite: ?
+* Ananas sur pizza : Oui/Non (Défi supplémentaire : faites en sorte qu'il ressemble à une case à cocher (non) cochée)
+
+* Passe-temps (en-tête plus petit)
+* Cela devrait contenir une liste à puces de vos passe-temps.
+* Au moins un élément doit contenir une sous-liste, par exemple si vous aimez les films, faites peut-être une sous-liste de certains films que vous aimez vraiment.
+
+* Vous pouvez toujours compter sur moi quand (en-tête plus petit)
+* Dites à vos coéquipiers quelle contribution positive vous apporterez au groupe.
+* Cela peut être technique, mettre les gens à l'aise, être un organisateur...
+
+* Une histoire drôle (en-tête plus petit)
+* Racontez une courte histoire drôle sur votre vie.
+
+* TL; DR (en-tête encore plus petit, sous histoire amusante)
+* Résumez votre histoire amusante en une courte phrase.
+
+Au bas de la page, il devrait y avoir un lien suivant et précédent, cela devrait renvoyer à la page de l'étudiant précédent (par ordre alphabétique) et à la suivante.
+Organisez-vous afin qu'il soit facile de savoir à qui vous devez vous lier.
+
+Les liens doivent avoir la structure suivante :
+
+<< précédent || VOTRE NOM || suivant >>

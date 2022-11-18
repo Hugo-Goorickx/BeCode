@@ -1,0 +1,23 @@
+main
+{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 10vw 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.small_title, .medium_title, .large_title
+{
+  text-align: center;
+  grid-area: 1 / 2 / 2 / 3;
+  opacity: 0;
+}
+
+.small, .medium, .large
+{
+  grid-area: 2 / 2 / 3 / 3;
+  opacity: 0;
+}
+
+

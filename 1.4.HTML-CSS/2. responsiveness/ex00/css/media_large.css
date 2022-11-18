@@ -1,0 +1,40 @@
+@media screen and (min-device-width: 1024px)
+{
+    body
+    {
+        background-color: blue;
+    }
+
+    #large, #large_title, #medium, #medium_title, #small, #small_title
+    {
+        opacity: 1;
+        font-size: 60px;
+    }
+
+    #small_title
+    {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    #small
+    {
+        grid-area: 2 / 1 / 7 / 2;
+    }
+    
+    #medium_title
+    {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    #medium
+    {
+        grid-area: 2 / 2 / 7 / 3;
+    }
+    
+    #large_title
+    {
+        grid-area: 1 / 3 / 2 / 4;
+    }
+    #large
+    {
+        grid-area: 2 / 3 / 7 / 4;
+  }
+}

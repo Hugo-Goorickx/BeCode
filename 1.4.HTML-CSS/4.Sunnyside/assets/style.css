@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,100;1,9..144,200;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&family=Open+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,100;1,9..144,200;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&family=Open+Sans:wght@300&display=swap");
+/*$size_div5:;
+$size_div6:;
+$size_div7:;
+$size_div8:;
+$size_div9:;
+$size_div10:;*/
+body {
+  font-family: "Fraunces", Fraunces, serif;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  margin: 0 0;
+}
+
+header {
+  background-color: rgb(74, 189, 242);
+  height: 20vw;
+  width: 100%;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 120cw 100vw 100vw 90vw 1fr repeat(2, 1.5fr) 2.5fr repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.div1 {
+  grid-area: 1/1/2/2;
+  background: url("../images/photos/image-header.jpg") center;
+  background-size: 200vw 120vw;
+  height: 120cw;
+  color: white;
+}
+.div1 h1 {
+  font-size: 15vw;
+  margin-top: 10vw;
+}
+
+.div2 {
+  grid-area: 2/1/3/2;
+  background: url("../images/photos/image-transform.jpg") center;
+  background-size: 108vw 100vw;
+  height: 100vw;
+}
+
+.div3 {
+  grid-area: 3/1/4/2;
+  margin-top: 5vw;
+  height: 100vw;
+}
+
+.text {
+  font-family: "Fraunces", serif;
+  color: #808397;
+}
+
+.link {
+  font-size: 5vw;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-style: "solid";
+  text-decoration-color: rgba(255, 234, 3, 0.83);
+  text-decoration-thickness: 1.5vw;
+}
+
+.div4 {
+  grid-area: 4/1/5/2;
+  background: url("../images/photos/image-stand-out.jpg") center;
+  background-size: 108vw 100vw;
+  height: 90vw;
+}
+
+.div5 {
+  grid-area: 5/1/6/2;
+}
+
+.div6 {
+  grid-area: 6/1/7/2;
+  background: url("../images/photos/image-graphic-design.jpg") center;
+  background-size: 200vw 167vw;
+  height: 150vw;
+  color: #24554A;
+}
+.div6 h1 {
+  margin-top: 100vw;
+}
+
+.div7 {
+  grid-area: 7/1/8/2;
+  background: url("../images/photos/image-photography.jpg") center;
+  background-size: 200vw 167vw;
+  height: 150vw;
+  color: #24554A;
+}
+.div7 h1 {
+  margin-top: 100vw;
+}
+
+.div8 {
+  grid-area: 8/1/9/2;
+}
+
+.div9 {
+  grid-area: 9/1/10/2;
+}
+
+.div10 {
+  grid-area: 10/1/11/2;
+}
+
+.arrow {
+  display: block;
+  margin: auto;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -22,7 +22,7 @@ h1 {
   display: grid;
   grid-area: "0 / 0 / 0 / 0";
   grid-template-columns: 1fr;
-  grid-template-rows: 120vw 100vw 100vw 90vw 100vw 150vw 150vw 300vw 100vw 75vw;
+  grid-template-rows: 120vw 100vw 100vw 90vw 100vw 150vw 150vw 300vw 100vw;
   text-align: center;
   height: 100%;
   width: 100%;
@@ -64,37 +64,6 @@ h1 {
   height: 100vw;
 }
 
-.text {
-  font-family: "Barlow", sans-serif;
-  color: #808397;
-  line-height: 150%;
-  word-spacing: 150%;
-  margin: 0 5%;
-}
-
-.other_text {
-  font-family: "Barlow", sans-serif;
-}
-
-.link {
-  opacity: 0.7;
-  font-size: 5vw;
-  font-weight: bold;
-}
-.link:hover {
-  opacity: 1;
-}
-.link::before {
-  position: absolute;
-  content: "";
-  width: 30vw;
-  height: 2vw;
-  border-radius: 50px;
-  background-color: yellow;
-  z-index: -1;
-  transform: translate(-1vw, 4vw);
-}
-
 .div4 {
   grid-area: "4 / 1 / 5 / 2";
   background: url("../images/photos/image-stand-out.jpg") center;
@@ -127,24 +96,6 @@ h1 {
 }
 .div7 h1 {
   margin-top: 100vw;
-}
-
-.img_pers {
-  width: 25vw;
-  height: 25vw;
-  border-radius: 50%;
-  margin-bottom: 5vw;
-}
-
-.pers_titre {
-  font-size: 6vw;
-  font-weight: bold;
-}
-
-.post {
-  font-size: 4vw;
-  font-family: "Fraunces", serif;
-  color: #808397;
 }
 
 .div8 {
@@ -200,8 +151,10 @@ h1 {
 }
 
 .div10 {
+  text-align: center;
+  overflow: hidden;
   display: grid;
-  grid-area: "10 / 1 / 11 / 2";
+  grid-area: "0 / 0 / 0 / 0";
   grid-template-columns: 1fr;
   grid-template-rows: "repeat(3, 1fr)";
   background-color: #90D4C6;
@@ -227,11 +180,60 @@ h1 {
   grid-area: 3/1/4/2;
 }
 
+.text {
+  font-family: "Barlow", sans-serif;
+  color: #808397;
+  line-height: 150%;
+  word-spacing: 150%;
+  margin: 0 5%;
+}
+
+.other_text {
+  font-family: "Barlow", sans-serif;
+}
+
+.link {
+  opacity: 0.7;
+  font-size: 5vw;
+  font-weight: bold;
+}
+.link:hover {
+  opacity: 1;
+}
+.link::before {
+  position: absolute;
+  content: "";
+  height: 2vw;
+  width: 30vw;
+  border-radius: 50px;
+  background-color: yellow;
+  z-index: -1;
+  transform: translate(-1vw, 4vw);
+}
+
+.img_pers {
+  height: 25vw;
+  width: 25vw;
+  border-radius: 50%;
+  margin-bottom: 5vw;
+}
+
+.pers_titre {
+  font-size: 6vw;
+  font-weight: bold;
+}
+
+.post {
+  font-size: 4vw;
+  font-family: "Fraunces", serif;
+  color: #808397;
+}
+
 .arrow {
   display: block;
   margin: auto;
-  width: 8vw;
   height: 19vw;
+  width: 8vw;
   animation: arrow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
@@ -247,6 +249,11 @@ h1 {
 
 .logo_bouh {
   color: #24554A;
+}
+
+.logo_link {
+  height: 8w;
+  width: 8vw;
 }
 
 @keyframes arrow {

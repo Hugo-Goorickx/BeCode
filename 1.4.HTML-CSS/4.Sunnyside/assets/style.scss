@@ -5,8 +5,8 @@ $size_div1: 120cw;
 $size_div2: 100vw;
 $size_div3: 100vw;
 $size_div4: 90vw;
-/*$size_div5:;
-$size_div6:;
+$size_div6: 150vw;
+/*
 $size_div7:;
 $size_div8:;
 $size_div9:;
@@ -34,7 +34,7 @@ header
 {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: $size_div1 $size_div2 $size_div3 $size_div4 1fr repeat(2, 1.5fr) 2.5fr repeat(2, 1fr);
+    grid-template-rows: $size_div1 $size_div2 $size_div3 $size_div4 $size_div3 $size_div6 1.5fr 2.5fr repeat(2, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     height: 100%;
@@ -96,6 +96,7 @@ header
 .div5
 {
     grid-area: 5 / 1 / 6 / 2;
+    height: $size_div3;
 }
 
 .div6
@@ -103,7 +104,7 @@ header
     grid-area: 6 / 1 / 7 / 2; 
     background: url("../images/photos/image-graphic-design.jpg") center;
     background-size: 200vw 167vw;
-    height:150vw;
+    height:$size_div6;
     color: #24554A;
     h1
     {
@@ -124,14 +125,89 @@ header
     }
 }
 
+.img_pers
+{
+    width: 25vw;
+    height: 25vw;
+    border-radius: 50%;
+    margin-bottom: 5vw;
+}
+
+.pers_titre
+{
+    font-size: 6vw;
+    font-weight: bold;
+}
+
+.post
+{
+    font-size: 4vw;
+    font-family: 'Fraunces', serif;
+    color: #808397;
+}
+
 .div8
 {
-    grid-area: 8 / 1 / 9 / 2; 
+    grid-area: 8 / 1 / 9 / 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20vw repeat(3, 85vw);
+    
+    margin-top: 10vw;
+    h1
+    {
+        grid-area: 1 / 1 / 2 / 2;
+        font-size: 7.5vw;
+        color:#A7AAAD;
+    }
+
+    .pers1
+    {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .pers2
+    {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+
+    .pers3
+    {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+
 }
 
 .div9
 {
-    grid-area: 9 / 1 / 10 / 2; 
+    grid-area: 9 / 1 / 10 / 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+        
+    .pic1
+    {
+        grid-area: 1 / 1 / 2 / 2;
+        background: url("../images/photos/image-photography.jpg") center;   
+    }
+    
+    .pic2
+    {
+        grid-area: 2 / 1 / 3 / 2;
+        background: url("../images/photos/image-photography.jpg") center;   
+    }
+    
+    .pic3
+    {
+        grid-area: 1 / 2 / 2 / 3;
+        background: url("../images/photos/image-photography.jpg") center;   
+    }
+    
+    .pic4
+    {
+        grid-area: 2 / 2 / 3 / 3;
+        background: url("../images/photos/image-photography.jpg") center;   
+    }
 }
 
 .div10

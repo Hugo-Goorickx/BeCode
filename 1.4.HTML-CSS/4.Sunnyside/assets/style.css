@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,100;1,9..144,200;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&family=Open+Sans:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,100;1,9..144,200;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&family=Open+Sans:wght@300&display=swap");
-/*$size_div5:;
-$size_div6:;
+/*
 $size_div7:;
 $size_div8:;
 $size_div9:;
@@ -23,7 +22,7 @@ header {
 .parent {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 120cw 100vw 100vw 90vw 1fr repeat(2, 1.5fr) 2.5fr repeat(2, 1fr);
+  grid-template-rows: 120cw 100vw 100vw 90vw 100vw 150vw 1.5fr 2.5fr repeat(2, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   height: 100%;
@@ -79,6 +78,7 @@ header {
 
 .div5 {
   grid-area: 5/1/6/2;
+  height: 100vw;
 }
 
 .div6 {
@@ -103,12 +103,67 @@ header {
   margin-top: 100vw;
 }
 
+.img_pers {
+  width: 25vw;
+  height: 25vw;
+  border-radius: 50%;
+  margin-bottom: 5vw;
+}
+
+.pers_titre {
+  font-size: 6vw;
+  font-weight: bold;
+}
+
+.post {
+  font-size: 4vw;
+  font-family: "Fraunces", serif;
+  color: #808397;
+}
+
 .div8 {
   grid-area: 8/1/9/2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20vw repeat(3, 85vw);
+  margin-top: 10vw;
+}
+.div8 h1 {
+  grid-area: 1/1/2/2;
+  font-size: 7.5vw;
+  color: #A7AAAD;
+}
+.div8 .pers1 {
+  grid-area: 2/1/3/2;
+}
+.div8 .pers2 {
+  grid-area: 3/1/4/2;
+}
+.div8 .pers3 {
+  grid-area: 4/1/5/2;
 }
 
 .div9 {
   grid-area: 9/1/10/2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.div9 .pic1 {
+  grid-area: 1/1/2/2;
+  background: url("../images/photos/image-photography.jpg") center;
+}
+.div9 .pic2 {
+  grid-area: 2/1/3/2;
+  background: url("../images/photos/image-photography.jpg") center;
+}
+.div9 .pic3 {
+  grid-area: 1/2/2/3;
+  background: url("../images/photos/image-photography.jpg") center;
+}
+.div9 .pic4 {
+  grid-area: 2/2/3/3;
+  background: url("../images/photos/image-photography.jpg") center;
 }
 
 .div10 {

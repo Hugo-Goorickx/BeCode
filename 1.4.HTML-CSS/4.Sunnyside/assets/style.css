@@ -1,28 +1,295 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,100;1,9..144,200;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&family=Open+Sans:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/*body
+{
+    font-family: "Fraunces", Fraunces, serif;
+    @include template_wh(100%, 100%);
+    margin: 0 0;
+    font-size: 5vw;
+}
+
+header
+{
+    background-color: rgb(74, 189, 242) ;
+    @include template_wh(30vw, 100%);
+}
+
+h1
+{
+    font-size: 10vw;
+}
+
+.parent 
+{
+    @include template_grid("0 / 0 / 0 / 0", 1fr, $size_div1 $size_div2 $size_div3 $size_div4 $size_div3 $size_div6 $size_div7 $size_div8 $size_div9);
+    text-align: center;
+    @include template_wh(100%, 100%);
+    overflow: hidden;
+}
+
+.sunnyday
+{
+    font:
+    {
+        family: 'Barlow', sans-serif;
+        weight: bold;
+        size: 7vw;
+    };
+    color: white;
+    position: absolute;
+    margin:
+    {
+        left: 5vw;
+        top: 6vw;
+    };
+}
+
+
+.div1
+{
+    @include template_pic("../images/photos/image-header.jpg", "1 / 1 / 2 / 2", 200vw, 120vw);
+    height: $size_div1;
+    h1
+    {
+        font-size: 20vw;
+        margin-top: 10vw;
+    }
+    color: white;
+}
+
+
+.div2
+{
+    @include template_pic("../images/photos/image-transform.jpg", "2 / 1 / 3 / 2", 108vw, 100vw);
+    height: $size_div2;
+}
+
+.div3
+{
+    grid-area: 3 / 1 / 4 / 2;
+    margin-top: 5vw;
+    height:$size_div3;
+}
+
+.div4
+{
+    @include template_pic("../images/photos/image-stand-out.jpg", "4 / 1 / 5 / 2", 108vw, 100vw);
+    height: $size_div4;
+}
+
+.div5
+{
+    grid-area: 5 / 1 / 6 / 2;
+    height: $size_div3;
+}
+
+.div6
+{
+    @include template_div("../images/photos/image-graphic-design.jpg", "6 / 1 / 7 / 2", $size_div6);
+}
+
+.div7
+{
+    @include template_div("../images/photos/image-photography.jpg", "7 / 1 / 8 / 2", $size_div7);
+}
+
+.div8
+{
+    @include template_grid("8 / 1 / 9 / 2", 1fr, 20vw 85vw 95vw 85vw);
+    margin-top: 10vw;
+    height: $size_div8;
+    h1
+    {
+        grid-area: 1 / 1 / 2 / 2;
+        font-size: 7.5vw;
+        color:#A7AAAD;
+    }
+    .pers1 { grid-area: 2 / 1 / 3 / 2; }
+    .pers2 { grid-area: 3 / 1 / 4 / 2; }
+    .pers3 { grid-area: 4 / 1 / 5 / 2; }
+
+}
+
+.div9
+{
+    @include template_grid("9 / 1 / 10 / 2", repeat(2, 1fr), repeat(2, 1fr));
+    @include template_wh($size_div9, 100%);
+    .pic1 { @include template_pic("../images/photos/image-gallery-milkbottles.jpg", "1 / 1 / 2 / 2", 100%, 125%); }
+    .pic2 { @include template_pic("../images/photos/image-gallery-orange.jpg", "1 / 2 / 2 / 3", 100%, 125%); }
+    .pic3 { @include template_pic("../images/photos/image-gallery-cone.jpg", "2 / 1 / 3 / 2", 100%, 125%); }
+    .pic4 { @include template_pic("../images/photos/image-gallery-sugarcubes.jpg", "2 / 2 / 3 / 3", 100%, 125%); }
+}
+
+.div10
+{
+    text-align: center;
+    overflow: hidden;
+    @include template_grid("0 / 0 / 0 / 0", 1fr, "repeat(3, 1fr)");
+    background-color: #90D4C6;
+    height: $size_div10;
+    word-spacing: 12vw;
+    font-family: 'Barlow', sans-serif;
+
+    .section1
+    {
+        color: #2C7566;
+        grid-area: 1 / 1 / 2 / 2;
+        margin-top: 10vw;
+        font: 
+        {
+            weight: bold;
+            size: 8vw;
+        };
+    }
+
+    .section2
+    {
+        color: #458D7E;
+        grid-area: 2 / 1 / 3 / 2;
+        margin-top: 5vw;
+        font-weight: bold;
+    }
+
+    .section3
+    {
+        margin-top: 6vw;
+        grid-area: 3 / 1 / 4 / 2;
+    }
+}
+
+.text
+{
+    font-family: 'Barlow', sans-serif;
+    color: #808397;
+    line-height: 150%;
+    word-spacing: 150%;
+    margin: 0 5%;
+}
+
+.other_text
+{
+    font-family: 'Barlow', sans-serif;
+}
+
+.link
+{
+    opacity: 0.7;
+    font: 
+    {
+        size: 5vw;
+        weight: bold;
+    };
+    &:hover
+    { opacity: 1; }
+    &::before
+    {
+        position: absolute;
+        content: "";
+        @include template_wh(2vw, 30vw);
+        border-radius: 50px;
+        background-color: yellow;
+        z-index: -1;
+        transform: translate(-1vw, 4vw);
+    }
+}
+
+.img_pers
+{
+    @include template_wh(25vw, 25vw);
+    border-radius: 50%;
+    margin-bottom: 5vw;
+}
+
+.pers_titre
+{
+    font:
+    {
+        size: 6vw;
+        weight: bold;
+    };
+}
+
+.post
+{
+    font:
+    {
+        size: 4vw;
+        family: 'Fraunces', serif;
+    };
+    color: #808397;
+}
+
+.arrow
+{
+    display: block;
+    margin: auto;
+    @include template_wh(19vw, 8vw);
+    animation: arrow 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.logo_all
+{
+    position: relative;
+}
+
+.logo_up2
+{
+    position: absolute;
+    margin: 
+    {
+        left: 90vw;
+        top: 9vw;
+    };
+}
+
+.logo_bouh
+{
+    color: #24554A;
+}
+
+.logo_link
+{
+    @include template_wh(8w, 8vw);
+}
+
+@keyframes arrow
+{
+    0%
+    {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 0;
+    }
+    100%
+    {
+        -webkit-transform: translateY(10vw);
+        transform: translateY(10vw);
+        opacity: 1;
+    }
+}*/
 body {
   font-family: "Fraunces", Fraunces, serif;
   height: 100%;
   width: 100%;
   margin: 0 0;
-  font-size: 5vw;
+  font-size: 1.5vw;
 }
 
 header {
   background-color: rgb(74, 189, 242);
-  height: 30vw;
+  height: 5vw;
   width: 100%;
 }
 
 h1 {
-  font-size: 10vw;
+  font-size: 3vw;
 }
 
 .parent {
   display: grid;
   grid-area: "0 / 0 / 0 / 0";
-  grid-template-columns: 1fr;
-  grid-template-rows: 120vw 100vw 100vw 90vw 100vw 150vw 150vw 300vw 100vw;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 50vw 40vw 40vw 40vw 60vw 30vw;
   text-align: center;
   height: 100%;
   width: 100%;
@@ -32,101 +299,111 @@ h1 {
 .sunnyday {
   font-family: "Barlow", sans-serif;
   font-weight: bold;
-  font-size: 7vw;
+  font-size: 2vw;
   color: white;
   position: absolute;
-  margin-left: 5vw;
-  margin-top: 6vw;
+  margin-left: 2vw;
+  margin-top: 2vw;
 }
 
 .div1 {
-  grid-area: "1 / 1 / 2 / 2";
+  grid-area: 1/1/2/3;
   background: url("../images/photos/image-header.jpg") center;
-  background-size: 200vw 120vw;
-  height: 120vw;
+  background-size: 90vw 50vw;
+  height: 50vw;
   color: white;
 }
 .div1 h1 {
-  font-size: 20vw;
-  margin-top: 10vw;
+  font-size: 8vw;
+  margin-top: 6vw;
 }
 
 .div2 {
-  grid-area: "2 / 1 / 3 / 2";
+  grid-area: 2/2/3/3;
   background: url("../images/photos/image-transform.jpg") center;
-  background-size: 108vw 100vw;
-  height: 100vw;
+  background-size: 50vw 40vw;
+  height: 40vw;
 }
 
 .div3 {
-  grid-area: 3/1/4/2;
-  margin-top: 5vw;
-  height: 100vw;
+  grid-area: 2/1/3/2;
+  margin-top: 10vw;
+  height: 40vw;
 }
 
 .div4 {
-  grid-area: "4 / 1 / 5 / 2";
+  grid-area: 3/1/4/2;
   background: url("../images/photos/image-stand-out.jpg") center;
-  background-size: 108vw 100vw;
-  height: 90vw;
+  background-size: 50vw 40vw;
+  height: 40vw;
 }
 
 .div5 {
-  grid-area: 5/1/6/2;
-  height: 100vw;
+  margin-top: 10vw;
+  grid-area: 3/2/4/3;
+  height: 40vw;
 }
 
 .div6 {
-  grid-area: "6 / 1 / 7 / 2";
+  grid-area: 4/1/5/2;
   background: url("../images/photos/image-graphic-design.jpg") center;
-  background-size: 200vw 167vw;
-  height: 150vw;
-  color: #24554A;
+  background-size: 50vw 40vw;
+  height: 40vw;
+  font-size: 115;
 }
 .div6 h1 {
-  margin-top: 100vw;
+  margin-top: 25vw;
+  font-size: 2vw;
 }
 
 .div7 {
-  grid-area: "7 / 1 / 8 / 2";
+  grid-area: 4/2/5/3;
   background: url("../images/photos/image-photography.jpg") center;
-  background-size: 200vw 167vw;
-  height: 150vw;
-  color: #24554A;
+  background-size: 50vw 40vw;
+  height: 40vw;
+  font-size: 115;
 }
 .div7 h1 {
-  margin-top: 100vw;
+  margin-top: 25vw;
+  font-size: 2vw;
 }
 
 .div8 {
   display: grid;
-  grid-area: "8 / 1 / 9 / 2";
-  grid-template-columns: 1fr;
-  grid-template-rows: 20vw 85vw 95vw 85vw;
+  grid-area: 5/1/6/3;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 10vw 4vw;
   margin-top: 10vw;
-  height: 300vw;
+  height: 60vw;
 }
 .div8 h1 {
-  grid-area: 1/1/2/2;
-  font-size: 7.5vw;
+  grid-area: 1/1/2/4;
+  font-size: 2vw;
   color: #A7AAAD;
+  height: 5vw;
 }
 .div8 .pers1 {
   grid-area: 2/1/3/2;
 }
 .div8 .pers2 {
-  grid-area: 3/1/4/2;
+  grid-area: 2/2/3/3;
 }
 .div8 .pers3 {
-  grid-area: 4/1/5/2;
+  grid-area: 2/3/3/4;
+}
+.div8 .text {
+  text-align: center;
+  margin-left: 8vw;
+  margin-right: 8vw;
+  font-size: 1.2vw;
 }
 
 .div9 {
+  grid-area: 6/1/7/3;
   display: grid;
-  grid-area: "9 / 1 / 10 / 2";
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  height: 100vw;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  height: 30vw;
   width: 100%;
 }
 .div9 .pic1 {
@@ -140,12 +417,12 @@ h1 {
   background-size: 100% 125%;
 }
 .div9 .pic3 {
-  grid-area: "2 / 1 / 3 / 2";
+  grid-area: "1 / 3 / 2 / 4";
   background: url("../images/photos/image-gallery-cone.jpg") center;
   background-size: 100% 125%;
 }
 .div9 .pic4 {
-  grid-area: "2 / 2 / 3 / 3";
+  grid-area: "1 / 4 / 2 / 5";
   background: url("../images/photos/image-gallery-sugarcubes.jpg") center;
   background-size: 100% 125%;
 }
@@ -158,43 +435,61 @@ h1 {
   grid-template-columns: 1fr;
   grid-template-rows: "repeat(3, 1fr)";
   background-color: #90D4C6;
-  height: 75vw;
-  word-spacing: 12vw;
+  height: 30vw;
+  word-spacing: 4vw;
   font-family: "Barlow", sans-serif;
 }
 .div10 .section1 {
   color: #2C7566;
   grid-area: 1/1/2/2;
-  margin-top: 10vw;
+  margin-top: 4vw;
   font-weight: bold;
-  font-size: 8vw;
+  font-size: 2.5vw;
 }
 .div10 .section2 {
   color: #458D7E;
   grid-area: 2/1/3/2;
-  margin-top: 5vw;
+  margin-top: 1vw;
   font-weight: bold;
 }
 .div10 .section3 {
-  margin-top: 6vw;
+  margin-top: 2vw;
   grid-area: 3/1/4/2;
+  word-spacing: 1.5vw;
+}
+
+.div3 h1, .div5 h1 {
+  text-align: start;
+  margin: 0 10vw;
 }
 
 .text {
   font-family: "Barlow", sans-serif;
+  text-align: start;
   color: #808397;
   line-height: 150%;
   word-spacing: 150%;
-  margin: 0 5%;
+  margin-left: 10vw;
+  margin-right: 8vw;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
 }
 
 .other_text {
   font-family: "Barlow", sans-serif;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  font-size: 1vw;
+  margin-top: 1.5vw;
+  line-height: 200%;
+  word-spacing: 130%;
 }
 
 .link {
+  margin: 0 10vw;
+  text-align: start;
   opacity: 0.7;
-  font-size: 5vw;
+  font-size: 1.5vw;
   font-weight: bold;
 }
 .link:hover {
@@ -203,37 +498,39 @@ h1 {
 .link::before {
   position: absolute;
   content: "";
-  height: 2vw;
-  width: 30vw;
+  height: 0.75vw;
+  width: 9vw;
   border-radius: 50px;
   background-color: yellow;
   z-index: -1;
-  transform: translate(-1vw, 4vw);
+  transform: translate(-0.25vw, 1.2vw);
 }
 
 .img_pers {
-  height: 25vw;
-  width: 25vw;
+  height: 5vw;
+  width: 5vw;
   border-radius: 50%;
   margin-bottom: 5vw;
 }
 
 .pers_titre {
-  font-size: 6vw;
+  font-size: 1.5vw;
   font-weight: bold;
 }
 
 .post {
-  font-size: 4vw;
+  font-size: 1vw;
   font-family: "Fraunces", serif;
   color: #808397;
 }
 
 .arrow {
   display: block;
-  margin: auto;
-  height: 19vw;
-  width: 8vw;
+  position: absolute;
+  top: 15vw;
+  left: 50vw;
+  height: 9vw;
+  width: 3vw;
   animation: arrow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
@@ -252,8 +549,8 @@ h1 {
 }
 
 .logo_link {
-  height: 8w;
-  width: 8vw;
+  height: 1.5w;
+  width: 1.5vw;
 }
 
 @keyframes arrow {

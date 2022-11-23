@@ -215,50 +215,31 @@ $size_div_g: 25vw;
     {
         grid-area: 1 / 2 / 2 / 3;
         @include template_pic("../images/icons/icon-facebook.svg", 8vw, 8vw);
-    }
-
-    .logo_link:hover
-    {
-        @include template_pic("../images/icons/icon-facebook-2.svg", 8vw, 8vw);
+        &:hover { @include template_pic("../images/icons/icon-facebook-2.svg", 8vw, 8vw); }
     }
 
     .logo_link1
     {
         grid-area: 1 / 3 / 2 / 4;
         @include template_pic("../images/icons/icon-instagram.svg", 8vw, 8vw);
-    }
-
-    .logo_link1:hover
-    {
-        @include template_pic("../images/icons/icon-instagram-2.svg", 8vw, 8vw);
+        &:hover { @include template_pic("../images/icons/icon-instagram-2.svg", 8vw, 8vw); }
     }
 
     .logo_link2
     {
         grid-area: 1 / 4 / 2 / 5;
         @include template_pic("../images/icons/icon-twitter.svg", 8vw, 8vw);
-    }
-
-    .logo_link2:hover
-    {
-        @include template_pic("../images/icons/icon-twitter-2.svg", 8vw, 8vw);
+        &:hover { @include template_pic("../images/icons/icon-twitter-2.svg", 8vw, 8vw); }
     }
 
     .logo_link3
     {
         grid-area: 1 / 5 / 2 / 6;
         @include template_pic("../images/icons/icon-pinterest.svg", 8vw, 8vw);
+        &:hover { @include template_pic("../images/icons/icon-pinterest-2.svg", 8vw, 8vw); }
     }
 
-    .logo_link3:hover
-    {
-        @include template_pic("../images/icons/icon-pinterest-2.svg", 8vw, 8vw);
-    }
-
-    .nav
-    {
-        visibility: hidden;
-    }
+    .nav { visibility: hidden; }
 }
 
 @media screen and (min-width: 426px)
@@ -452,52 +433,34 @@ $size_div_g: 25vw;
     {
         grid-area: 1 / 4 / 2 / 5;
         @include template_pic("../images/icons/icon-facebook.svg", 1vw, 1vw);
-    }
-
-    .logo_link:hover
-    {
-        @include template_pic("../images/icons/icon-facebook-2.svg", 1vw, 1vw);
+        &:hover { @include template_pic("../images/icons/icon-facebook-2.svg", 1vw, 1vw); }
     }
 
     .logo_link1
     {
         grid-area: 1 / 5 / 2 / 6;
         @include template_pic("../images/icons/icon-instagram.svg", 1vw, 1vw);
-    }
-
-    .logo_link1:hover
-    {
-        @include template_pic("../images/icons/icon-instagram-2.svg", 1vw, 1vw);
-
+        &:hover { @include template_pic("../images/icons/icon-instagram-2.svg", 1vw, 1vw); }
     }
 
     .logo_link2
     {
         grid-area: 1 / 6 / 2 / 7;
         @include template_pic("../images/icons/icon-twitter.svg", 1vw, 1vw);
-    }
-
-    .logo_link2:hover
-    {
-        @include template_pic("../images/icons/icon-twitter-2.svg", 1vw, 1vw);
-
+        &:hover
+        { @include template_pic("../images/icons/icon-twitter-2.svg", 1vw, 1vw); }
     }
 
     .logo_link3
     {
         grid-area: 1 / 7 / 2 / 8;
         @include template_pic("../images/icons/icon-pinterest.svg", 1vw, 1vw);
-    }
-
-    .logo_link3:hover
-    {
-        @include template_pic("../images/icons/icon-pinterest-2.svg", 1vw, 1vw);
+        &:hover
+        { @include template_pic("../images/icons/icon-pinterest-2.svg", 1vw, 1vw); }
     }
 
     .logo_up2
-    {
-        visibility: hidden;
-    }
+    { visibility: hidden; }
 }
 
 .logo_link, .logo_link:hover, .logo_link1, .logo_link1:hover, .logo_link2, .logo_link2:hover, .logo_link3, .logo_link3:hover

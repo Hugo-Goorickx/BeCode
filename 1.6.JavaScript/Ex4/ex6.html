@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="personnal vcard">
+        <meta name="keywords" content="HTML, CSS">
+        <meta name="author" content="Hugo Goorickx">
+        <title>
+            Js test
+        </title>
+        <script>
+            function factorial(a)
+            {
+                if (a < 0)
+                {
+                    if (a < -1)
+                        return (a * factorial(a + 1));
+                    return (-1);
+                }
+                else if (a > 0)
+                {
+                    if (a > 1)
+                        return (a * factorial(a - 1));
+                    return (1);
+                }
+                return (1);
+            }
+            console.log(factorial(4));
+        </script>
+    </head>
+    <body>
+    </body>
+
+</html>

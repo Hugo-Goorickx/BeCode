@@ -9,8 +9,9 @@ function calcDistance(a, b)
 
 function ex45()
 {
-    console.log(calcDistance([1, 1], [2, 2]));
-    console.log(calcDistance([1, 1], [3, 1]));
-    console.log(calcDistance([4, 1], [1, 1]));
-    console.log(calcDistance([-2, 2], [2, -2]));
+    let x1=document.getElementById("ex44a").value;
+    let y1=document.getElementById("ex44b").value;
+    let y2=document.getElementById("ex44c").value;
+    let x2=document.getElementById("ex44d").value;
+    console.log(calcDistance([x1, y1], [x2, y2]));
 }

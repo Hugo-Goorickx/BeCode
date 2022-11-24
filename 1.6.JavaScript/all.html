@@ -7,50 +7,66 @@
         <meta name="keywords" content="HTML, CSS">
         <meta name="author" content="Hugo Goorickx">
         <title>
-            Js test
+            Decouverte de JavaScript
         </title>
-        <script src="Ex1/ex1.js"></script>
-        <script src="Ex1/ex2.js"></script>
-        <script src="Ex2/ex1.js"></script>
-        <script src="Ex2/ex2.js"></script>
-        <script src="Ex2/ex3.js"></script>
-        <script src="Ex2/ex4.js"></script>
-        <script src="Ex2/ex5.js"></script>
-        <script src="Ex2/ex6.js"></script>
-        <script src="Ex2/ex7.js"></script>
-        <script src="Ex3/ex1.js"></script>
-        <script src="Ex3/ex2.js"></script>
-        <script src="Ex3/ex3.js"></script>
-        <script src="Ex3/ex4.js"></script>
-        <script src="Ex3/ex5.js"></script>
-        <script src="Ex4/ex1.js"></script>
-        <script src="Ex4/ex2.js"></script>
-        <script src="Ex4/ex3.js"></script>
-        <script src="Ex4/ex4.js"></script>
-        <script src="Ex4/ex5.js"></script>
-        <script src="Ex4/ex6.js"></script>
-        <script src="Ex5/ex1.js"></script>
-        <script src="Ex5/ex2.js"></script>
-        <script src="Ex6/ex1.js"></script>
-        <script src="Ex6/ex2.js"></script>
+        <script type="text/javascript" src="Ex1/ex1.js"></script>
+        <script type="text/javascript" src="Ex1/ex2.js"></script>
+        <script type="text/javascript" src="Ex2/ex1.js"></script>
+        <script type="text/javascript" src="Ex2/ex2.js"></script>
+        <script type="text/javascript" src="Ex2/ex3.js"></script>
+        <script type="text/javascript" src="Ex2/ex4.js"></script>
+        <script type="text/javascript" src="Ex2/ex5.js"></script>
+        <script type="text/javascript" src="Ex2/ex6.js"></script>
+        <script type="text/javascript" src="Ex2/ex7.js"></script>
+        <script type="text/javascript" src="Ex3/ex1.js"></script>
+        <script type="text/javascript" src="Ex3/ex2.js"></script>
+        <script type="text/javascript" src="Ex3/ex3.js"></script>
+        <script type="text/javascript" src="Ex3/ex4.js"></script>
+        <script type="text/javascript" src="Ex3/ex5.js"></script>
+        <script type="text/javascript" src="Ex4/ex1.js"></script>
+        <script type="text/javascript" src="Ex4/ex2.js"></script>
+        <script type="text/javascript" src="Ex4/ex3.js"></script>
+        <script type="text/javascript" src="Ex4/ex4.js"></script>
+        <script type="text/javascript" src="Ex4/ex5.js"></script>
+        <script type="text/javascript" src="Ex4/ex6.js"></script>
+        <script type="text/javascript" src="Ex5/ex1.js"></script>
+        <script type="text/javascript" src="Ex5/ex2.js"></script>
+        <script type="text/javascript" src="Ex6/ex1.js"></script>
+        <script type="text/javascript" src="Ex6/ex2.js"></script>
 
     </head>
     <body>
         <h1>Premier chapitre</h1>
         <div>
-
-            <button onclick="ex11()">Ex 1</button>
-            <button onclick="ex12()">Ex 2</button>
+            <div>
+                <input type="text" placeholder="Entrez un texte" id="ex11" />
+                <button onclick="ex11()">Ex 1</button><br>
+            </div>
+            <div>
+                <input type="text" placeholder="Entrez un nom" id="ex12a" />
+                <input type="text" placeholder="Entrez un prenom" id="ex12b" />
+                <input type="text" placeholder="Entrez une ville" id="ex12c" />
+                <button onclick="ex12()">Ex 2</button>
+            </div>
         </div>
         <h1>Deuxieme chapitre</h1>
         <div>
-            <button onclick="ex21()">Ex 1</button>
+            <div>
+                <input type="text" placeholder="Entrez votre age" id="ex21" />
+                <button onclick="ex21()">Ex 1</button><br>
+            </div>
             <button onclick="ex22()">Ex 2</button>
             <button onclick="ex23()">Ex 3</button>
             <button onclick="ex24()">Ex 4</button>
             <button onclick="ex25()">Ex 5</button>
-            <button onclick="ex26()">Ex 6</button>
-            <button onclick="ex27()">Ex 7</button>
+            <div>
+                <input type="text" placeholder="Entrez un nombre entre 1 et 7" id="ex26" />
+                <button onclick="ex26()">Ex 6</button>
+            </div>
+            <div>
+                <input type="text" placeholder="Nombre de nombres a additionner" id="ex27" />
+                <button onclick="ex27()">Ex 7</button>
+            </div>
         </div>
         <h1>Troisieme chapitre</h1>
         <div>
@@ -62,12 +78,30 @@
         </div>
         <h1>Quatrieme chapitre</h1>
         <div>
-            <button onclick="ex41()">Ex 1</button>
+            <div>
+                <input type="text" placeholder="longueur" id="ex41a" />
+                <input type="text" placeholder="largeur" id="ex41b" />
+                <button onclick="ex41()">Ex 1</button>
+            </div>
             <button onclick="ex42()">Ex 2</button>
-            <button onclick="ex43()">Ex 3</button>
+            <div>
+                <input type="text" placeholder="combien de nombres" id="ex43" />
+                <button onclick="ex43()">Ex 3</button>
+            </div>
             <button onclick="ex44()">Ex 4</button>
-            <button onclick="ex45()">Ex 5</button>
-            <button onclick="ex46()">Ex 6</button>
+            <div>
+                <p>Premier point</p>
+                <input type="text" placeholder="x" id="ex44a" />
+                <input type="text" placeholder="y" id="ex44b" />
+                <p>Deuxieme point</p>
+                <input type="text" placeholder="x" id="ex44c" />
+                <input type="text" placeholder="y" id="ex44d" />
+                <button onclick="ex45()">Ex 5</button>
+            </div>
+            <div>
+                <input type="text" placeholder="nombre" id="ex45" />
+                <button onclick="ex46()">Ex 6</button>
+            </div>
         </div>
         <h1>Cinquieme chapitre</h1>
         <div>
@@ -76,8 +110,25 @@
         </div>
         <h1>Sixieme chapitre</h1>
         <div>
-            <button onclick="ex61()">Ex 1</button>
-            <button onclick="ex62()">Ex 2</button>
+            <div>
+                <input type="text" placeholder="position x" id="ex61a" />
+                <input type="text" placeholder="position y" id="ex61b" />
+                <input type="text" placeholder="rayon" id="ex61c" />
+                <button onclick="ex61()">Ex 1</button>
+            </div>
+            <div>
+                <p>Premier rectangle</p>
+                <input type="text" placeholder="position x" id="ex62a" />
+                <input type="text" placeholder="position y" id="ex62b" />
+                <input type="text" placeholder="hauteur" id="ex62c" />
+                <input type="text" placeholder="largeur" id="ex62d" />
+                <p>Deuxieme rectangle</p>
+                <input type="text" placeholder="position x" id="ex62ab" />
+                <input type="text" placeholder="position y" id="ex62bb" />
+                <input type="text" placeholder="hauteur" id="ex62cb" />
+                <input type="text" placeholder="largeur" id="ex62db" />
+                <button onclick="ex62()">Ex 2</button>
+            </div>
         </div>
     </body>
 

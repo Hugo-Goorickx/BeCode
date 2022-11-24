@@ -4,5 +4,5 @@ function calcSurface (long, larg)
 }
 function ex41()
 {
-    console.log(calcSurface(prompt("longueur: "), prompt("largeur: ")));
+    console.log(calcSurface(document.getElementById("ex41a").value, document.getElementById("ex41b").value));
 }

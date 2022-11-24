@@ -16,5 +16,5 @@ function factorial(a)
 }
 function ex46()
 {
-    console.log(factorial(4));
+    console.log(factorial(document.getElementById("ex45").value));
 }

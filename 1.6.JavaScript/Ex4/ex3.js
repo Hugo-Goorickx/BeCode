@@ -18,5 +18,5 @@ function mutliRand(n)
 }
 function ex43()
 {
-    console.log(mutliRand(prompt("how many numbers :")));
+    console.log(mutliRand(document.getElementById("ex43").value));
 }

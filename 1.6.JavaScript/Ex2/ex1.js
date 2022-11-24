@@ -1,6 +1,6 @@
-function ex12()
+function ex21()
 {
-    let age = prompt("age ?");
+    let age = document.getElementById("ex12c").value;
     if (age >= 18)
         console.log("Vous etes adulte");
     else

@@ -20,9 +20,15 @@ class Rectangle
 }
 function ex62()
 {
-    let rec1 = new Rectangle(1, 1, 3, 5);
-    let rec2 = new Rectangle(1, 1, 3, 6);
-    let rec3 = new Rectangle(0, 0, 1, 2);
+    let x = document.getElementById("ex62a").value;
+    let y = document.getElementById("ex62b").value;
+    let width = document.getElementById("ex62c").value;
+    let length = document.getElementById("ex62d").value;
+    let xb = document.getElementById("ex62ab").value;
+    let yb = document.getElementById("ex62bb").value;
+    let widthb = document.getElementById("ex62cb").value;
+    let lengthb = document.getElementById("ex62db").value;
+    let rec1 = new Rectangle(x, y, width, length);
+    let rec2 = new Rectangle(xb, yb, widthb, lengthb);
     console.log(rec1.collides(rec2));
-    console.log(rec3.collides(rec2));
 }

@@ -1,6 +1,7 @@
 function ex27()
 {
-    let n = prompt("number repeat: ");
+    // let n = document.getElementById("ex27").value;
+    let n = prompt("number: ");
     let sum = 0;
     for (let i = 0; i < n; i++)
         sum += +prompt("number: ");

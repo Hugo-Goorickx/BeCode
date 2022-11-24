@@ -20,6 +20,9 @@ class Cercle
 }
 function ex61()
 {
-    let cercle = new Cercle(1, 1, 3);
+    let posX = document.getElementById("ex61a").value;
+    let posY = document.getElementById("ex61b").value;
+    let rayon = document.getElementById("ex61c").value;
+    let cercle = new Cercle(posX, posY, rayon);
     console.log(cercle.getter);
 }

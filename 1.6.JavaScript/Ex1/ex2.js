@@ -5,4 +5,6 @@ function ex12()
     let city = document.getElementById("ex12c").value;
 
     console.log("Your name is " + firstName + " " + name + " and you live in " + city);
+    document.getElementById("ex12out").innerHTML = "Your name is " + firstName + " " + name + " and you live in " + city;
+
 }

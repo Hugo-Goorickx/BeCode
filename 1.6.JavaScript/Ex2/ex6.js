@@ -6,5 +6,4 @@ function ex26()
         numDay = prompt("number between 1 and 7:");
     console.log(days[numDay - 1]);
     document.getElementById("ex26out").innerHTML = days[numDay - 1];
-
 }

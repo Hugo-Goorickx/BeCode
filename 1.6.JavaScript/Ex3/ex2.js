@@ -9,7 +9,6 @@ function sum(array_num)
 function ex32()
 {
     let array_test1 = [1, 2, 3, 4, 5];
-    let array_test2 = [100, 101, 102];
     console.log(sum(array_test1));
-    console.log(sum(array_test2));
+    document.getElementById("ex32out").innerHTML = sum(array_test1);
 }

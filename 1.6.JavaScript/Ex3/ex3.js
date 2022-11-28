@@ -10,7 +10,6 @@ function moyenne(array_num)
 function ex33()
 {
     let array_test1 = [1, 2, 3, 4, 5];
-    let array_test2 = [100, 101, 102];
     console.log(moyenne(array_test1));
-    console.log(moyenne(array_test2));
+    document.getElementById("ex33out").innerHTML = moyenne(array_test1);
 }

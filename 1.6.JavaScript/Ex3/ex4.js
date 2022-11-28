@@ -12,7 +12,6 @@ function tech_2(array_in)
 function ex34()
 {
     let array1 = [1, 2, 3, 4, 5];
-    let array2 = [100, 101, 102];
     console.log(tech_1(array1));
-    console.log(tech_1(array2));
+    document.getElementById("ex34out").innerHTML = tech_1(array1) + " " + tech_2(array1);
 }

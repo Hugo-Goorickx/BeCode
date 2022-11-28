@@ -12,6 +12,8 @@ function bonusEx1()
 {
     let time = document.getElementById("exbonus1a").value;
     let planet = document.getElementById("exbonus1b").value;
-    console.log(planet);
-    console.log(ageSpace(time, planet));
+    let result = ageSpace(time, planet);
+    console.log(result);
+    document.getElementById("bonusex1out").innerHTML = result;
+
 }

@@ -61,25 +61,20 @@
                 <input type="number" placeholder="Entrez votre age" id="ex21" />
                 <button onclick="ex21()">Ex 1</button>
                 <p>Result: <div id="ex21out"></div></p>
-
             </div>
             <div>
                 <input type="text" placeholder="min:" id="ex22a" />
                 <input type="text" placeholder="max:" id="ex22b" />
                 <button onclick="ex22()">Ex 2</button>
                 <p>Result: <div id="ex22out"></div></p>
-
             </div>
             <div>
                 <button onclick="ex23()">Ex 3</button>
                 <p>Result: <div id="ex23out"></div></p>
-
             </div>
             <div>
-                
                 <button onclick="ex24()">Ex 4</button>
                 <p>Result: <div id="ex24out"></div></p>
-                
             </div>
             <div>
                 <input type="number" placeholder="Your favorite number: " id="ex25" />
@@ -102,6 +97,7 @@
         <div>
             <div>
                 <button onclick="ex31()">Ex 1</button>
+                <p>Result: <div id="ex31out"></div></p>
             </div>
             <div>
                 <button onclick="ex32()">Ex 2</button>
@@ -109,15 +105,15 @@
             </div>
             <div>
                 <button onclick="ex33()">Ex 3</button>
-                <p>Result: <div id=""></div></p>
+                <p>Result: <div id="ex33out"></div></p>
             </div>
             <div>
                 <button onclick="ex34()">Ex 4</button>
-                <p>Result: <div id=""></div></p>
+                <p>Result: <div id="ex34out"></div></p>
             </div>
             <div>
                 <button onclick="ex35()">Ex 5</button>
-                <p>Result: <div id=""></div></p>
+                <p>Result: <div id="ex35out"></div></p>
             </div>
         </div>
         <h1>Quatrieme chapitre</h1>
@@ -126,13 +122,23 @@
                 <input type="number" placeholder="longueur" id="ex41a" />
                 <input type="number" placeholder="largeur" id="ex41b" />
                 <button onclick="ex41()">Ex 1</button>
+                <p>Result: <div id="ex41out"></div></p>
+
             </div>
-            <button onclick="ex42()">Ex 2</button>
+            <div>
+                <button onclick="ex42()">Ex 2</button>
+                <p>Result: <div id="ex42out"></div></p>
+
+            </div>
             <div>
                 <input type="number" placeholder="combien de nombres" id="ex43" />
                 <button onclick="ex43()">Ex 3</button>
+                <p>Result: <div id="ex43out"></div></p>
             </div>
-            <button onclick="ex44()">Ex 4</button>
+            <div>
+                <button onclick="ex44()">Ex 4</button>
+                <p>Result: <div id="ex44out"></div></p>
+            </div>
             <div>
                 <p>Premier point</p>
                 <input type="number" placeholder="x" id="ex44a" />
@@ -141,16 +147,24 @@
                 <input type="number" placeholder="x" id="ex44c" />
                 <input type="number" placeholder="y" id="ex44d" />
                 <button onclick="ex45()">Ex 5</button>
+                <p>Result: <div id="ex45out"></div></p>
             </div>
             <div>
                 <input type="number" placeholder="nombre" id="ex45" />
                 <button onclick="ex46()">Ex 6</button>
+                <p>Result: <div id="ex46out"></div></p>
             </div>
         </div>
         <h1>Cinquieme chapitre</h1>
         <div>
-            <button onclick="ex51()">Ex 1</button>
-            <button onclick="ex52()">Ex 2</button>
+            <div>
+                <button onclick="ex51()">Ex 1</button>
+                <p>Result: <div id="ex51out"></div></p>
+            </div>
+            <div>
+                <button onclick="ex52()">Ex 2</button>
+                <p>Result: <div id="ex52out"></div></p>
+            </div>
         </div>
         <h1>Sixieme chapitre</h1>
         <div>
@@ -159,6 +173,7 @@
                 <input type="number" placeholder="position y" id="ex61b" />
                 <input type="number" placeholder="rayon" id="ex61c" />
                 <button onclick="ex61()">Ex 1</button>
+                <p>Result: <div id="ex61out"></div></p>
             </div>
             <div>
                 <p>Premier rectangle</p>
@@ -172,27 +187,37 @@
                 <input type="number" placeholder="hauteur" id="ex62cb" />
                 <input type="number" placeholder="largeur" id="ex62db" />
                 <button onclick="ex62()">Ex 2</button>
+                <p>Result: <div id="ex62out"></div></p>
             </div>
             <h1>Chapitre bonus</h1>
             <div>
-                <input type="number" placeholder="temps en secondes" id="exbonus1a" />
-                <select name="planet" id="exbonus1b">
-                    <option value="">--Please choose an option--</option>
-                    <option value="Mercury">Mercury</option>
-                    <option value="Venus">Venus</option>
-                    <option value="Earth">Earth</option>
-                    <option value="Mars">Mars</option>
-                    <option value="Jupiter">Jupiter</option>
-                </select>    
-                <button onclick="bonusEx1()">Ex 1</button><br>
-                <input type="number" placeholder="Rue A" id="exbonus2a" />
-                <input type="number" placeholder="Avenue A" id="exbonus2b" />
-                <input type="number" placeholder="Rue B" id="exbonus2c" />
-                <input type="number" placeholder="Avenue B" id="exbonus2d" />
-                <button onclick="bonusEx2()">Ex 2</button>
-                <input type="number" placeholder="prix" id="exbonus3a" />
-                <input type="number" placeholder="Recu" id="exbonus3b" />
-                <button onclick="bonusEx3()">Ex 3</button>
+                <div>
+                    <input type="number" placeholder="temps en secondes" id="exbonus1a" />
+                    <select name="planet" id="exbonus1b">
+                        <option value="">--Please choose an option--</option>
+                        <option value="Mercury">Mercury</option>
+                        <option value="Venus">Venus</option>
+                        <option value="Earth">Earth</option>
+                        <option value="Mars">Mars</option>
+                        <option value="Jupiter">Jupiter</option>
+                    </select>    
+                    <button onclick="bonusEx1()">Ex 1</button><br>
+                    <p>Result: <div id="bonusex1out"></div></p>
+                </div>
+                <div>
+                    <input type="number" placeholder="Rue A" id="exbonus2a" />
+                    <input type="number" placeholder="Avenue A" id="exbonus2b" />
+                    <input type="number" placeholder="Rue B" id="exbonus2c" />
+                    <input type="number" placeholder="Avenue B" id="exbonus2d" />
+                    <button onclick="bonusEx2()">Ex 2</button>
+                    <p>Result: <div id="bonusex2out"></div></p>
+                </div>
+                <div>
+                    <input type="number" placeholder="prix" id="exbonus3a" />
+                    <input type="number" placeholder="Recu" id="exbonus3b" />
+                    <button onclick="bonusEx3()">Ex 3</button>
+                    <p>Result: <div id="bonusex3out"></div></p>
+                </div>
             </div>
         </div>
     </body>

@@ -19,5 +19,8 @@ function bonusEx3()
 {
     let prix = document.getElementById("exbonus3a").value;
     let recu = document.getElementById("exbonus3b").value;
-    console.log(computeChange(prix, recu));
+    let result = computeChange(prix, recu);
+    console.log(result);
+    document.getElementById("bonusex3out").innerHTML = result;
+
 }

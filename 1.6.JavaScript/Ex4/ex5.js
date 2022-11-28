@@ -13,5 +13,7 @@ function ex45()
     let y1=document.getElementById("ex44b").value;
     let y2=document.getElementById("ex44c").value;
     let x2=document.getElementById("ex44d").value;
-    console.log(calcDistance([x1, y1], [x2, y2]));
+    let result = calcDistance([x1, y1], [x2, y2]);
+    console.log(result);
+    document.getElementById("ex45out").innerHTML = result;
 }

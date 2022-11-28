@@ -18,5 +18,7 @@ function mutliRand(n)
 }
 function ex43()
 {
-    console.log(mutliRand(document.getElementById("ex43").value));
+    let result = mutliRand(document.getElementById("ex43").value);
+    console.log(result);
+    document.getElementById("ex43out").innerHTML = result;
 }

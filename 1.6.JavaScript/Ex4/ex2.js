@@ -9,4 +9,5 @@ function rand10()
 function ex42()
 {
     console.log(rand10());
+    document.getElementById("ex42out").innerHTML = rand10();
 }

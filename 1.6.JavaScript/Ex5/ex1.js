@@ -14,5 +14,7 @@ function askTvSerie(name_in, prod_year_in, cast_in)
 function ex51()
 {
     let serieTV = askTvSerie("Hugo", 2001, ["moi", "ma mere", "ma copine"]);
-    console.log("Name: " + serieTV["name"] + "\n" + "Prod year: " + serieTV["prod_year"] + "\n" + "Casting: " + serieTV["cast"]);
+    let result = "Name: " + serieTV["name"] + "\n" + "Prod year: " + serieTV["prod_year"] + "\n" + "Casting: " + serieTV["cast"]
+    console.log(result);
+    document.getElementById("ex51out").innerHTML = result;
 }

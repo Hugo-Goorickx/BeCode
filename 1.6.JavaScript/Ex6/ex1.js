@@ -25,4 +25,5 @@ function ex61()
     let rayon = document.getElementById("ex61c").value;
     let cercle = new Cercle(posX, posY, rayon);
     console.log(cercle.getter);
+    document.getElementById("ex61out").innerHTML = cercle.getter;
 }

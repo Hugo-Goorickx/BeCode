@@ -31,4 +31,5 @@ function ex62()
     let rec1 = new Rectangle(x, y, width, length);
     let rec2 = new Rectangle(xb, yb, widthb, lengthb);
     console.log(rec1.collides(rec2));
+    document.getElementById("ex62out").innerHTML = rec1.collides(rec2);
 }

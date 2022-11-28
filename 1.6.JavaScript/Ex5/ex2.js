@@ -35,5 +35,7 @@ function ex52()
 {
     let SerieTV = askTvSerie("Hugo", 2001, ["moi", "ma mere", "ma copine"]);
     SerieTV = randomizeCast(SerieTV);
-    console.log("Name: " + SerieTV["name"] + "\n" + "Prod year: " + SerieTV["prod_year"] + "\n" + "Casting: " + SerieTV["cast"]);
+    let result = "Name: " + SerieTV["name"] + "\n" + "Prod year: " + SerieTV["prod_year"] + "\n" + "Casting: " + SerieTV["cast"]
+    console.log(result);
+    document.getElementById("ex52out").innerHTML = result;
 }

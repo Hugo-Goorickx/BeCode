@@ -14,7 +14,10 @@ function boucle(a, b)
 
 function manhattan(xa, ya, xb, yb)
 {
-    console.log(boucle(xa, xb) + boucle(ya, yb));
+    let result = boucle(xa, xb) + boucle(ya, yb);
+    console.log(result);
+    document.getElementById("bonusex2out").innerHTML = result;
+
 }
 
 function bonusEx2()

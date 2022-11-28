@@ -7,7 +7,7 @@ function boucle(a, b)
             a++;
         else
             b++;
-            x++;
+        x++;
     }
     return x;
 }

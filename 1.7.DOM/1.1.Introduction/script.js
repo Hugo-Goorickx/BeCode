@@ -1,5 +1,3 @@
-/*
-*/
 function rand(x)
 {
     return Math.floor(Math.random() * x);
@@ -12,6 +10,7 @@ function background()
     let B = rand(255);
     document.body.style.background = "rgb(" + R + "," + G + "," + B + ")";
 }
+
 let title = document.getElementsByTagName("title")[0];
 
 console.log(title);

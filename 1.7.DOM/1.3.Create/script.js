@@ -1,6 +1,3 @@
-/*
-*/
-
 function rand(x)
 {
     return Math.floor(Math.random() * x);
@@ -18,10 +15,8 @@ function bakcground(input)
 }
 
 let start = document.getElementsByTagName('article')[0];
-console.log(start);
 let every_one = ["Arno Volts" ,"Aurélien Mariaule" ,"Aurore Lemaire" ,"Benjamin Porsont" ,"Céline Verreydt" ,"Corentin Miserque" ,"Dominique Coppée" ,"Edouard     de Romrée de Vichenet" ,"Hugo Goorickx ","Jofrey Houyoux" ,"Jonathan Manes" ,"jonathan bajoux" ,"Laura Wilhelmi" ,"Lysie Soyez" ,"Marnie Benalia" ,"Mathilde     Cornelis" ,"Milo Bonnet" ,"Nadim El Nakadi" ,"Nathalie Vanden Abeele" ,"Nathalie Goffette" ,"Nour Everaert" ,"Pierre Mauriello" ,"Quentin Bource ","Virginie Dourson"];
-let new_span, new_content, elem;
-let all = 0;
+let new_span, new_content, elem, all = 0;
 let rand_start = rand(every_one.length);
 while (all++ < every_one.length)
 {
@@ -30,7 +25,6 @@ while (all++ < every_one.length)
     new_content = document.createTextNode(elem);
     new_span.appendChild(new_content);
     bakcground(new_span);
-    console.log(new_span);
     start.appendChild(new_span);
     if (++rand_start == every_one.length)
         rand_start = 0;

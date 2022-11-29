@@ -202,6 +202,46 @@
   .nav {
     visibility: hidden;
   }
+  /* Dropdown Button */
+  .dropbtn {
+    height: 1vw;
+    width: 1vw;
+    margin-left: 85vw;
+    background-color: rgba(4, 170, 109, 0);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown:hover .dropbtn {
+    background-color: rgba(4, 170, 109, 0);
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    margin-left: 68vw;
+    position: absolute;
+    background-color: rgba(241, 241, 241, 0.2196078431);
+    min-width: 10vw;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-content a:hover {
+    background-color: rgba(241, 241, 241, 0.2196078431);
+  }
 }
 @media screen and (min-width: 426px) {
   body {
@@ -428,8 +468,18 @@
     background: url("../images/icons/icon-pinterest-2.svg") center;
     background-size: 1vw 1vw;
   }
-  .logo_up2 {
-    visibility: hidden;
+  /* Dropdown Button */
+  .dropbtn {
+    display: none;
+  }
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    position: absolute;
+    word-spacing: 2vw;
+    font-size: 1vw;
+    color: white;
+    margin-left: 70vw;
+    margin-top: 3vw;
   }
 }
 .logo_link, .logo_link:hover, .logo_link1, .logo_link1:hover, .logo_link2, .logo_link2:hover, .logo_link3, .logo_link3:hover {
@@ -542,25 +592,6 @@ header {
 
 .logo_all {
   position: relative;
-}
-
-.logo_up2 {
-  position: absolute;
-  margin-left: 90vw;
-  margin-top: 9vw;
-}
-
-.nav {
-  position: absolute;
-  word-spacing: 2vw;
-  font-size: 1vw;
-  color: white;
-  margin-left: 70vw;
-  margin-top: 3vw;
-}
-
-.little_nav:hover {
-  color: rgb(207, 206, 206);
 }
 
 .button_nav {

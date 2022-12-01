@@ -11,7 +11,7 @@
 		<title>
 			Test gen JS
 		</title>
-		<script src="exec/card.js"></script>
+		<script src="exec/card.js" type="module"></script>
 	</head>
 	<body onload="onLoadHandler()">
 		<div class="blob">
@@ -19,11 +19,11 @@
 				<path fill="#FF0066" d="M46.2,-45.6C61,-31.4,75,-15.7,73.2,-1.8C71.4,12.1,53.8,24.2,39,31C24.2,37.9,12.1,39.6,-5.3,44.8C-22.6,50.1,-45.2,59,-54.7,52.1C-64.2,45.2,-60.6,22.6,-57.6,3C-54.6,-16.6,-52.1,-33.1,-42.6,-47.4C-33.1,-61.6,-16.6,-73.5,-0.4,-73.1C15.7,-72.6,31.4,-59.9,46.2,-45.6Z" transform="translate(100 100)" />
 		  	</svg>
 		</div>
-		<button onclick="down()">prev</button>
+		<button id="b2" onclick="down()" class="button"><img src="./imgs/arrow.png" class="reverse"></button>
 		<main class="parent">
 			
 		</main>
-		<button onclick="up()">next</button>
+		<button id="b1" onclick="up()" class="button"><img src="./imgs/arrow.png" class="normal"></button>
 	</body>
 </html>
 <!--<div class="container">

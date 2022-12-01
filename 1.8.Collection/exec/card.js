@@ -60,48 +60,67 @@ class Card
 //affiche les 3 cardes en focntion de la page ou on se situe
 function onLoadHandler()
 {
-    let tmp1 = [all_img[where_are_we][0], all_img[where_are_we][1], all_img[where_are_we][2], all_img[where_are_we][3], all_img[where_are_we][4]];
-    let div = ['div1', 'div2', 'div3', 'div4', 'div5'];
+
     let tmp = document.querySelectorAll('.container');
 
     for(let i = 0; i < tmp.length;i++)
         tmp[i].remove();
     
-    for(let i = 0; i < 5;i++)
-        tmp1[i].gen_card();
+    for (let i = 0; i < nb_card;i++)
+    {
+        if (++where_are_we >= all_img.length)
+            where_are_we = 0;
+        all_img[where_are_we].gen_card();
+    }
     
     tmp = document.querySelectorAll('.container');
-    for(let i = 0; i<tmp.length;i++)
-        tmp[i].classList.add(div[i]);
+    for(let i = 0; i < nb_card;i++)
+    {
+        tmp[i].classList.add("div" + (i + 1));
+        tmp[i].style.left = ((280 * i) + (space * (i + 1))) + "px";
+    }
 }
 
 //recule
 function down()
 {
-    if (--where_are_we < 0)
-        where_are_we = 1;
+    where_are_we -= nb_card * 2;
+    if (where_are_we < 0)
+        where_are_we += all_img.length;
     onLoadHandler();
 }
 
 //avance
 function up()
 {
-    if (++where_are_we > 1)
+    if (where_are_we > all_img.length)
         where_are_we = 0;
     onLoadHandler();
 }
 
-//variables globales
-let img1 = new Card("1", "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.", "James Cameron", "Leonardo DiCaprio, Kate Winslet, Billy Zane", "19 Dec 1997", "75", "$659,363,944", "https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg");
-let img2 = new Card("The Avengers", "Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.", "Joss Whedon", "Robert Downey Jr., Chris Evans, Scarlett Johansson", "04 May 2012", "69", "$623,357,910", "https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg");
-let img3 = new Card("The Avengers", "Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.", "Joss Whedon", "Robert Downey Jr., Chris Evans, Scarlett Johansson", "04 May 2012", "69", "$623,357,910", "https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg");
-let img4 = new Card("2", "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.", "James Cameron", "Leonardo DiCaprio, Kate Winslet, Billy Zane", "19 Dec 1997", "75", "$659,363,944", "https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg");
-let img5 = new Card("The Avengers", "Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.", "Joss Whedon", "Robert Downey Jr., Chris Evans, Scarlett Johansson", "04 May 2012", "69", "$623,357,910", "https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg");
-let img6 = new Card("The Avengers", "Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.", "Joss Whedon", "Robert Downey Jr., Chris Evans, Scarlett Johansson", "04 May 2012", "69", "$623,357,910", "https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg");
-let img7 = new Card("3", "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.", "James Cameron", "Leonardo DiCaprio, Kate Winslet, Billy Zane", "19 Dec 1997", "75", "$659,363,944", "https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg");
-let img8 = new Card("The Avengers", "Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.", "Joss Whedon", "Robert Downey Jr., Chris Evans, Scarlett Johansson", "04 May 2012", "69", "$623,357,910", "https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg");
-let img9 = new Card("The Avengers", "Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.", "Joss Whedon", "Robert Downey Jr., Chris Evans, Scarlett Johansson", "04 May 2012", "69", "$623,357,910", "https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg");
-let img10 = new Card("The Avengers", "Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.", "Joss Whedon", "Robert Downey Jr., Chris Evans, Scarlett Johansson", "04 May 2012", "69", "$623,357,910", "https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg");
-let all_img = [[img1, img2, img3, img4, img5], [img6, img7, img8, img9, img10]]
-let where_are_we = 0;
 
+//variables globales
+let where_are_we = 0;
+let size_all = screen.width;
+let nb_card = 0;
+while (size_all >= 320 && nb_card < 5)
+{
+    size_all -= 320;
+    nb_card++;
+}
+let space = 20 + (size_all / (nb_card));
+document.body.onload = function() {onLoadHandler
+    ()};
+document.getElementById("b1").onclick = function() {up
+    ()};
+document.getElementById("b2").onclick = function() {down
+    ()};
+import myJson from '../test.json' assert {type: 'json'};
+
+let tmp;
+let all_img = [];
+for (let elem of myJson.collection)
+{
+    tmp = new Card(elem.Title, elem.Plot, elem.Real, elem.Cast, elem.Date, elem.Metascore, elem.Boxoffice, elem.img);
+    all_img.push(tmp);
+}

@@ -2,46 +2,36 @@
 body {
   font-family: "Roboto", sans-serif;
   background: linear-gradient(to right bottom, #A9C9FF 0%, #FFBBEC 100%);
-  height: 50vw;
+  height: 100%;
   width: 100%;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
+  background-size: 400vw 400vw;
   animation: gradient 15s ease infinite;
 }
 
 .div1, .div2, .div3, .div4, .div5 {
+  left: 0;
   position: absolute;
-  top: 10vw;
-}
-
-.div1 {
-  left: 2.0833333333vw;
-}
-
-.div2 {
-  left: 21.6666666667vw;
-}
-
-.div3 {
-  left: 41.25vw;
-}
-
-.div4 {
-  left: 60.8333333333vw;
-}
-
-.div5 {
-  left: 80.4166666667vw;
+  top: 25%;
+  width: 280px;
+  height: 400px;
 }
 
 .container {
-  width: 17.5vw;
-  height: 25vw;
   background: #f2f2f2;
   overflow: hidden;
   border-radius: 20px;
   cursor: pointer;
   box-shadow: 0 0 20px 8px #000000;
+}
+.container:hover {
+  transform: translateY(-1);
+}
+.container:hover .flap::before {
+  transform: translatex(-140px);
+}
+.container:hover .flap::after {
+  transform: translatex(140px);
 }
 
 .content {
@@ -49,35 +39,35 @@ body {
   top: 10%;
   text-align: justify;
   color: black;
-  padding-left: 2.5vw;
-  padding-right: 0.625vw;
-  height: 25vw;
-  font-size: 1.25vw;
+  padding-left: 40px;
+  padding-right: 10px;
+  height: 400px;
+  font-size: 20px;
 }
 
 .title {
-  font-size: 1.5625vw;
+  font-size: 25px;
   color: rgb(141, 141, 247);
 }
 
 .plot {
-  height: 8.75vw;
-  font-size: 0.9375vw;
-  margin-bottom: 1.875vw;
+  height: 140px;
+  font-size: 15px;
+  margin-bottom: 30px;
 }
 
 .director, .actors {
-  font-size: 0.8125vw;
+  font-size: 13px;
 }
 
 .released {
-  font-size: 0.625vw;
-  margin-top: 1.25vw;
+  font-size: 10px;
+  margin-top: 20px;
 }
 
 .end {
-  font-size: 0.625vw;
-  margin-top: 0.625vw;
+  font-size: 10px;
+  margin-top: 10px;
 }
 
 .flap {
@@ -90,7 +80,7 @@ body {
   height: 100%;
   width: 50%;
   background: var(--img) white;
-  background-size: 17.5vw 25vw;
+  background-size: 280px 400px;
   background-repeat: no-repeat;
   transition: 1s;
 }
@@ -99,17 +89,32 @@ body {
 }
 .flap::after {
   right: 0;
-  background-position: -8.75vw;
+  background-position: -140px;
 }
 
-.container:hover {
+.button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  text-decoration: none;
+}
+.button:active {
   transform: translateY(-1);
+  top: 1px;
 }
-.container:hover .flap::before {
-  transform: translatex(-8.75vw);
+.button img {
+  height: 20px;
+  width: 20px;
 }
-.container:hover .flap::after {
-  transform: translatex(8.75vw);
+.button .normal, .button .reverse {
+  position: absolute;
+  top: 48%;
+}
+.button .reverse {
+  left: 98%;
+  transform: scaleX(-1);
 }
 
 .blob {

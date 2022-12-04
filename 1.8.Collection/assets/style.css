@@ -46,8 +46,15 @@ body {
 }
 
 .title {
-  font-size: 25px;
+  font-size: 22px;
   color: rgb(141, 141, 247);
+  border: none;
+}
+
+.exit {
+  border: none;
+  background-color: Transparent;
+  color: white;
 }
 
 .plot {
@@ -111,21 +118,26 @@ body {
 .button .normal, .button .reverse {
   position: absolute;
   top: 48%;
+  left: 1%;
 }
 .button .reverse {
   left: 98%;
   transform: scaleX(-1);
 }
 
-.blob {
+.cover {
   position: absolute;
+  height: 100vh;
   top: 0;
   left: 0;
-  fill: #023F92;
-  width: 50vmax;
-  z-index: -1;
-  animation: move 10s ease-in-out infinite;
-  transform-origin: 50% 50%;
+  width: 100vw;
+  background-color: #000000;
+  opacity: 0.9;
+  text-align: center;
+}
+
+.video {
+  opacity: 1;
 }
 
 @keyframes move {

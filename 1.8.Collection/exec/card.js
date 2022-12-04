@@ -1,6 +1,6 @@
 class Card
 {
-    constructor (title, plot, director, actors, released, metascore, boxoffice, img)
+    constructor (title, plot, director, actors, released, metascore, boxoffice, img, vid)
     {
         this.title = title;
         this.plot = plot;
@@ -10,8 +10,9 @@ class Card
         this.metascore = metascore;
         this.boxoffice = boxoffice;
         this.img = img;
+        this.vid = vid;
     }
-
+    
     //setup la div avec contenu
     addElement(className, content)
     {
@@ -21,17 +22,17 @@ class Card
         new_span.appendChild(new_content);
         return new_span
     }
-
+    
     //setup la div sans contenu
     global_div(content, className)
     {
         let tmp = document.createElement('div');
         tmp.classList.add(className);
         if (content)
-            content.appendChild(tmp);
+        content.appendChild(tmp);
         return tmp;
     }
-
+    
     //genere la carte
     gen_card()
     {
@@ -41,19 +42,67 @@ class Card
         
         //add all information
         let tmp = this.global_div(content, 'content');
-        tmp.appendChild(this.addElement("title", this.title));
+        
+        //create the button to launch the trailler
+        let new_span = document.createElement('button');
+        new_span.classList.add('title');
+        new_span.appendChild(document.createTextNode(this.title));
+        new_span.addEventListener("click", this.show.bind(this));
+        tmp.appendChild(new_span);
+
+        //add all datas
         tmp.appendChild(this.addElement("plot", this.plot));
-        tmp.appendChild(this.addElement("director", this.director));
-        tmp.appendChild(this.addElement("actors", this.actors));
-        tmp.appendChild(this.addElement("released", this.released));
+        tmp.appendChild(this.addElement("director", "Director : " + this.director));
+        tmp.appendChild(this.addElement("actors", "Actros : " + this.actors));
+        tmp.appendChild(this.addElement("released", "Date de sortie : " + this.released));
         
         let tmp2 = this.global_div(tmp, 'end');
-        tmp2.appendChild(this.addElement("metascore", this.metascore));
-        tmp2.appendChild(this.addElement("boxoffice", this.boxoffice));
+        tmp2.appendChild(this.addElement("metascore", "Metascore : " + this.metascore));
+        tmp2.appendChild(this.addElement("boxoffice", "Box Office : " + this.boxoffice));
         
         //setup the picture
         let test =this.global_div(content, 'flap');
         test.style.setProperty('--img', "url("+this.img+")");
+    }
+
+    //show the trailler
+    show()
+    {
+        //define where we add the vid
+        let start = document.getElementsByTagName("main")[0];
+
+        //create a div to show a background 
+        let cover = document.createElement('div');
+        cover.classList.add('cover');
+        
+        //create the vide with the good attributes
+        let new_span = document.createElement('video');
+        new_span.classList.add('video');
+        new_span.setAttribute("width" , screen.width);
+        new_span.setAttribute("height" , screen.width * 0.75);
+        new_span.setAttribute("controls" , "");
+        new_span.setAttribute("autoplay" , "");
+        
+        //setup the video's source
+        let new_span2 = document.createElement('source');
+        new_span2.setAttribute("src" , this.vid);
+        
+        //create the button to exit the video
+        let out_button = document.createElement('button');
+        let new_content = document.createTextNode("Exit");
+        out_button.classList.add('exit');
+        out_button.appendChild(new_content);
+        out_button.addEventListener("click", function()
+        {
+            let tmp = document.getElementsByClassName("cover")[0];
+            tmp.remove();
+        });
+        
+        //merge each elem
+        new_span.appendChild(new_span2);
+        cover.appendChild(out_button);
+        cover.appendChild(new_span);
+        start.appendChild(cover);
     }
 }
 
@@ -68,9 +117,9 @@ function onLoadHandler()
     
     for (let i = 0; i < nb_card;i++)
     {
-        if (++where_are_we >= all_img.length)
-            where_are_we = 0;
-        all_img[where_are_we].gen_card();
+        if (++global_index >= all_img.length)
+            global_index = 0;
+        all_img[global_index].gen_card();
     }
     
     tmp = document.querySelectorAll('.container');
@@ -84,23 +133,23 @@ function onLoadHandler()
 //recule
 function down()
 {
-    where_are_we -= nb_card * 2;
-    if (where_are_we < 0)
-        where_are_we += all_img.length;
+    global_index -= nb_card * 2;
+    if (global_index < 0)
+        global_index += all_img.length;
     onLoadHandler();
 }
 
 //avance
 function up()
 {
-    if (where_are_we > all_img.length)
-        where_are_we = 0;
+    if (global_index > all_img.length)
+        global_index = 0;
     onLoadHandler();
 }
 
 
 //variables globales
-let where_are_we = 0;
+let global_index = 0;
 let size_all = screen.width;
 let nb_card = 0;
 while (size_all >= 320 && nb_card < 5)
@@ -108,19 +157,21 @@ while (size_all >= 320 && nb_card < 5)
     size_all -= 320;
     nb_card++;
 }
-let space = 20 + (size_all / (nb_card));
-document.body.onload = function() {onLoadHandler
-    ()};
-document.getElementById("b1").onclick = function() {up
-    ()};
-document.getElementById("b2").onclick = function() {down
-    ()};
+size_all = screen.width;
+for (let i = 0; i < nb_card; i++)
+{
+    size_all -= 280;
+}
+let space = size_all / (nb_card + 1);
+
+//Setup function using in html
+document.body.onload = function() {onLoadHandler ()};
+document.getElementById("b1").onclick = function() {up ()};
+document.getElementById("b2").onclick = function() {down ()};
+
+//import and setup all datas from json file
 import myJson from '../test.json' assert {type: 'json'};
 
-let tmp;
 let all_img = [];
 for (let elem of myJson.collection)
-{
-    tmp = new Card(elem.Title, elem.Plot, elem.Real, elem.Cast, elem.Date, elem.Metascore, elem.Boxoffice, elem.img);
-    all_img.push(tmp);
-}
+    all_img.push(new Card(elem.Title, elem.Plot, elem.Real, elem.Cast, elem.Date, elem.Metascore, elem.Boxoffice, elem.img, elem.video));

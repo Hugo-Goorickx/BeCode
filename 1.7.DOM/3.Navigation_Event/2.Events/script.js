@@ -49,7 +49,6 @@ function inputSpace(e)
 {
     console.log(e);
 
-
     //if spacebar
     if (e.charCode == 32)
     {

@@ -74,18 +74,16 @@ class Card
         //create a div to show a background 
         let cover = document.createElement('div');
         cover.classList.add('cover');
-        
+       
         //create the vide with the good attributes
-        let new_span = document.createElement('video');
-        new_span.classList.add('video');
+        let new_span = document.createElement('iframe');
         new_span.setAttribute("width" , screen.width);
         new_span.setAttribute("height" , screen.width * 0.75);
-        new_span.setAttribute("controls" , "");
-        new_span.setAttribute("autoplay" , "");
-        
-        //setup the video's source
-        let new_span2 = document.createElement('source');
-        new_span2.setAttribute("src" , this.vid);
+        new_span.setAttribute("title" , this.title);
+        new_span.setAttribute("frameborder" , "0");
+        new_span.setAttribute("allowfullscreen" , "");
+        new_span.setAttribute("allow" , "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
+        new_span.setAttribute("src" , this.vid);
         
         //create the button to exit the video
         let out_button = document.createElement('button');
@@ -98,8 +96,7 @@ class Card
             tmp.remove();
         });
         
-        //merge each elem
-        new_span.appendChild(new_span2);
+        //merge each elemt
         cover.appendChild(out_button);
         cover.appendChild(new_span);
         start.appendChild(cover);

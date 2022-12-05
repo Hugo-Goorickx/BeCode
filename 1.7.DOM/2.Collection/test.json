@@ -10,7 +10,7 @@
             "Metascore":"78",
             "Boxoffice":"$6,113,144",
             "img":"../imgs/chateau_dans_le_ciel.jpeg",
-            "video":"../vid/castle_in_the_sky.mp4"
+            "video":"https://www.youtube.com/embed/FWjiXOqRKhk"
         },
         
         {
@@ -22,7 +22,7 @@
             "Metascore":"87",
             "Boxoffice":"$383,336,762",
             "img":"../imgs/back_to_the_future.jpeg",
-            "video":"../vid/back_to_the_futur.mp4"
+            "video":"https://www.youtube.com/embed/C-4Pr9kBtGc"
         },
         
         {
@@ -34,7 +34,7 @@
             "Metascore":"68",
             "Boxoffice":"$2,048,359,754",
             "img":"../imgs/Aven_End.jpg",
-            "video":"../vid/avengers_infinity_war.mp4"
+            "video":"https://www.youtube.com/embed/6ZfuNTqbHE8"
         },
 
         {
@@ -46,7 +46,7 @@
             "Metascore":"69",
             "Boxoffice":"$623,357,910",
             "img":"https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
-            "video":"../vid/the_avengers.mp4"
+            "video":"https://www.youtube.com/embed/eOrNdBpGMv8"
         },
 
         {
@@ -58,7 +58,7 @@
             "Metascore":"81",
             "Boxoffice":"$103,365,863",
             "img":"../imgs/everything_everywhere_all_at_once_affiche.jpeg",
-            "video":"../vid/everything_everywhere_all_at_once .mp4"
+            "video":"https://www.youtube.com/embed/wxN1T1uxQ2g"
         },
 
         {
@@ -70,7 +70,7 @@
             "Metascore":"72",
             "Boxoffice":"$168,657,565",
             "img":"../imgs/the_suicide_squad.jpeg",
-            "video":"../vid/the_suicide_squad.mp4"
+            "video":"https://www.youtube.com/embed/eg5ciqQzmK0"
         },
 
         {
@@ -82,7 +82,7 @@
             "Metascore":"76",
             "Boxoffice":"$773,350,147",
             "img":"../imgs/guardians_of_the_galaxy.jpeg",
-            "video":"../vid/guardians_of_the_galaxy.mp4"
+            "video":"https://www.youtube.com/embed/d96cjJhvlMA"
         },
 
         {
@@ -94,7 +94,7 @@
             "Metascore":"54",
             "Boxoffice":"...",
             "img":"../imgs/snyder_cut.png",
-            "video":"../vid/zack_snyders_justice_league.mp4"
+            "video":"https://www.youtube.com/embed/vM-Bja2Gy04"
         },
 
         {
@@ -106,7 +106,7 @@
             "Metascore":"$401,847,900",
             "Boxoffice":"74",
             "img":"../imgs/dune.jpeg",
-            "video":"../vid/dune.mp4"
+            "video":"https://www.youtube.com/embed/8g18jFHCLXk"
         },
 
         {
@@ -118,7 +118,7 @@
             "Metascore":"62",
             "Boxoffice":"...",
             "img":"../imgs/the_king.jpg",
-            "video":"../vid/the_king.mp4"
+            "video":"https://www.youtube.com/embed/svVykTznk9Q"
         }
     ]
 }

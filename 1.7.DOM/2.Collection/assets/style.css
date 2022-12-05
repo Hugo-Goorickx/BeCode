@@ -132,12 +132,8 @@ body {
   left: 0;
   width: 100vw;
   background-color: #000000;
-  opacity: 0.9;
-  text-align: center;
-}
-
-.video {
   opacity: 1;
+  text-align: center;
 }
 
 @keyframes move {

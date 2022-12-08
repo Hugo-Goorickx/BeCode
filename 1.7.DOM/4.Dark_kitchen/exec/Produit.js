@@ -1,3 +1,16 @@
+export let test = [];
+
+function add_order()
+{
+    if (test.includes(this) == false)
+        test.push(this);
+    else
+    {
+        let index = test.indexOf(this);
+        test[index].nb_prod++;
+    }
+}
+
 export class Produit
 {
     /**
@@ -17,6 +30,8 @@ export class Produit
         this.category = category;
         this.price = price;
         this.img = img;
+        this.nb_prod = 1;
+        this.category.unshift("Tout");
     }
 
     /**
@@ -32,7 +47,7 @@ export class Produit
      *      txt     => Interieur de la balise
      * 
      * Return:
-     *      Revoit la balise cree
+     *      Revoit la balise creee
      */
     creatBalise(balise, txt)
     {
@@ -69,6 +84,7 @@ export class Produit
         let name_prod = this.creatBalise('p', this.name); //4
         let price_prod = this.creatBalise('p', this.price + "$");
         let button = this.creatBalise('button', 'Order');
+        button.addEventListener('click', add_order.bind(this));
         global_div.append(img, name_prod, price_prod, button); //5
         start.appendChild(global_div); //6
     }

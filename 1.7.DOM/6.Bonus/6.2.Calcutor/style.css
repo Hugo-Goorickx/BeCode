@@ -5,14 +5,32 @@ body {
   font-family: "Barlow", sans-serif;
 }
 
-.parent {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 60% 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+button {
+  border: 0px hidden #0082b0;
 }
 
+@media screen and (max-width: 426px) {
+  .parent {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows: 1fr 60% 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+}
+@media screen and (min-width: 426px) {
+  .parent {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 60% 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+}
 .gcalc, .calcul {
   background-color: #565656;
 }
@@ -36,8 +54,8 @@ body {
   grid-row-gap: 2vw;
 }
 .calcul .div1, .calcul .div2, .calcul .div3, .calcul .div4, .calcul .div5, .calcul .div6, .calcul .div7, .calcul .div8, .calcul .div8, .calcul .div9, .calcul .div10, .calcul .div11, .calcul .div12, .calcul .div13, .calcul .div14, .calcul .div15, .calcul .div16, .calcul .div17, .calcul .div18 {
-  border: 1px solid black;
   border-radius: 1vw;
+  text-decoration: none;
   width: 100%;
   height: 100%;
 }
@@ -98,10 +116,22 @@ body {
 
 .result {
   background-color: #f5a34d;
+  box-shadow: 0px 4px 0px 0px #db9244;
 }
 
 .num {
   background-color: #ececec;
+  box-shadow: 0px 4px 0px 0px #c0c0c0;
+}
+
+.reset {
+  background-color: rgb(254, 49, 49);
+  box-shadow: 0px 4px 0px 0px rgb(220, 42, 42);
+}
+
+.op {
+  background-color: rgb(74, 212, 74);
+  box-shadow: 0px 4px 0px 0px rgb(61, 179, 61);
 }
 
 /*# sourceMappingURL=style.css.map */

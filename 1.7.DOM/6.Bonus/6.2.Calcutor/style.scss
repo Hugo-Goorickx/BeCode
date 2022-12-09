@@ -4,13 +4,32 @@ body{
     background-color: #99c089;
     font-family: 'Barlow', sans-serif;
 }
-
-.parent {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 60% 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+button {
+    border: 0px hidden #0082b0;
+}
+@media screen and (max-width: 426px) {
+    
+    .parent {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 10% 1fr 10%;
+        grid-template-rows: 1fr 60% 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        }
+}
+@media screen and (min-width: 426px) {
+    .parent {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 60% 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+    
 }
 
 .gcalc, .calcul
@@ -40,8 +59,8 @@ body{
     grid-row-gap: 2vw;
     .div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8, .div8, .div9 ,.div10, .div11, .div12, .div13, .div14, .div15, .div16, .div17, .div18
     {
-        border: 1px solid black;
         border-radius: 1vw;
+        text-decoration: none;
         width:100%; 
         height: 100%;
     }
@@ -68,10 +87,23 @@ body{
 .result
 {
     background-color: #f5a34d;
+    box-shadow: 0px 4px 0px 0px #db9244;
 }
 
 .num
 {
     background-color: #ececec;
+    box-shadow: 0px 4px 0px 0px #c0c0c0;
+}
 
+.reset
+{
+    background-color: rgb(254, 49, 49);
+    box-shadow: 0px 4px 0px 0px rgb(220, 42, 42);
+}
+
+.op
+{
+    background-color: rgb(74, 212, 74);
+    box-shadow: 0px 4px 0px 0px rgb(61, 179, 61);
 }

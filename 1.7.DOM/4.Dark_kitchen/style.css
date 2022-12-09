@@ -128,7 +128,7 @@ body .content .test .topnav a.icon {
   display: inline;
   position: absolute;
   width: 10vw;
-  right: 15vw;
+  right: 22vw;
   top: 7vw;
 }
 body .content .test .topnav a.icon .btn2 {
@@ -603,7 +603,7 @@ html {
   height: 100px;
   position: absolute;
   right: 1vw;
-  top: 9.5vw;
+  top: 6.5vw;
 }
 
 .theme-switch {
@@ -653,6 +653,4 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

@@ -1,6 +1,8 @@
 var canvas;
 var game;
 var anim;
+var moveR = 0;
+var moveL = 0;
 
 const PLAYER_HEIGHT = 100;
 const PLAYER_WIDTH = 5;
@@ -36,9 +38,9 @@ function draw()
     context.fillRect(canvas.width - PLAYER_WIDTH - 5, game.computer.y, PLAYER_WIDTH, PLAYER_HEIGHT);
     context.beginPath();
     context.fillStyle = 'white'; //5
-    let x_ball = game.ball.x - (PLAYER_WIDTH / 2);
-    let y_ball = game.ball.y - (PLAYER_WIDTH / 2);
-    context.fillRect(x_ball, y_ball, PLAYER_WIDTH, PLAYER_WIDTH);
+    let x_ball = game.ball.x - (PLAYER_WIDTH);
+    let y_ball = game.ball.y - (PLAYER_WIDTH);
+    context.fillRect(x_ball, y_ball, PLAYER_WIDTH * 2, PLAYER_WIDTH * 2);
     context.font = "center 50px serif"; //6
     context.fillText(game.player.score, 250, 60);   
     context.fillText(game.computer.score, canvas.width - 250, 60);   
@@ -63,24 +65,33 @@ function changeDirection(playerPosition)
  *      4       Si la souris est en bas on met la coord y a la hauteur max
  *      5       Sinon on met la coord y a la position de la souris
  */
-function playerMove(event)
+// function playerMove(event)
+// {
+//     var canvasLocation = canvas.getBoundingClientRect();//1
+//     var mouseLocation = event.clientY - canvasLocation.y;//2
+//     if (mouseLocation < PLAYER_HEIGHT / 2) //3
+//         game.player.y = 0;
+//     else if (mouseLocation > canvas.height - PLAYER_HEIGHT / 2) //4
+//         game.player.y = canvas.height - PLAYER_HEIGHT;
+//     else //5
+//         game.player.y = mouseLocation - PLAYER_HEIGHT / 2;
+// }
+function playerRRefresh()
 {
-    var canvasLocation = canvas.getBoundingClientRect();//1
-    var mouseLocation = event.clientY - canvasLocation.y;//2
-    if (mouseLocation < PLAYER_HEIGHT / 2) //3
+    game.player.y += moveR;
+    if (game.player.y < 0)
         game.player.y = 0;
-    else if (mouseLocation > canvas.height - PLAYER_HEIGHT / 2) //4
+    else if (game.player.y + PLAYER_HEIGHT > canvas.height) //4
         game.player.y = canvas.height - PLAYER_HEIGHT;
-    else //5
-        game.player.y = mouseLocation - PLAYER_HEIGHT / 2;
 }
 
-/**
- * Bouge la barre de l'ordi
- */
-function computerMove()
+function playerLRefresh()
 {
-    game.computer.y += game.ball.speed.y * game.computer.speedRatio;
+    game.computer.y += moveL;
+    if (game.computer.y < 0)
+        game.computer.y = 0;
+    else if (game.computer.y + PLAYER_HEIGHT > canvas.height) //4
+        game.computer.y = canvas.height - PLAYER_HEIGHT;
 }
 
 /**
@@ -142,9 +153,10 @@ function ballMove()
 function play()
 {
     draw();//1
-    computerMove();//2
+    playerLRefresh()
+    playerRRefresh()
     ballMove();//3
-    anim = setTimeout(play, 10);//4
+    anim = window.requestAnimationFrame(play);//4
 }
 
 /**
@@ -174,7 +186,7 @@ function reset()
  */
 function stop()
 {
-    clearTimeout(anim);//1
+    cancelAnimationFrame(anim);//1
 
     game.computer.score = 0; //2
     game.player.score = 0;
@@ -205,8 +217,28 @@ game =
 reset();
 
 // Mouse move event
-canvas.addEventListener('mousemove', playerMove);
+// canvas.addEventListener('mousemove', playerMove);
+document.body.addEventListener('keydown', (e) => {
+    if (e.key =='w')
+        moveR = -7.5;
+    else if (e.key == 's')
+        moveR = 7.5;
+    else if (e.key =='ArrowUp')
+        moveL = -7.5;
+    else if (e.key == 'ArrowDown')
+        moveL = 7.5;
+})
 
+document.body.addEventListener('keyup', (e) => {
+    if (e.key =='ArrowUp')
+        moveL = 0;
+    else if (e.key == 'ArrowDown')
+        moveL = 0;
+    else if (e.key =='w')
+        moveR = 0;
+    else if (e.key == 's')
+        moveR = 0;
+})
 // Mouse click event
 document.querySelector('#start-game').addEventListener('click', play);
 document.querySelector('#stop-game').addEventListener('click', stop);

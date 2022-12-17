@@ -109,6 +109,7 @@ body .commande .exit {
 body .content .test {
   position: fixed;
   top: 0;
+  background-color: grey;
   width: 100%;
 }
 body .content .test .topnav {

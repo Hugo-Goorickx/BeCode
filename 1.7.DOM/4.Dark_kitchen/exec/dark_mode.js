@@ -88,15 +88,15 @@ function changeColor()
     if (actualTheme === 'dark')
     {
         for (let elem of tmp)
-            elem.setAttribute('src', "imgs/poubelle-blanc.png");
-        light(gen_fleche('imgs/white_arrow_left.png'), gen_fleche('imgs/white_arrow_right.png'));
+            elem.setAttribute('src', "imgs/poubelle-blanc.webp");
+        light(gen_fleche('imgs/white_arrow_left.webp'), gen_fleche('imgs/white_arrow_right.webp'));
 
     }
     else if (actualTheme === 'light')
     {
         for (let elem of tmp)
-            elem.setAttribute('src', "imgs/poubelle-noir.png");
-        light(gen_fleche('imgs/black_arrow_left.png'), gen_fleche('imgs/black_arrow_right.png'));
+            elem.setAttribute('src', "imgs/poubelle-noir.webp");
+        light(gen_fleche('imgs/black_arrow_left.webp'), gen_fleche('imgs/black_arrow_right.webp'));
     }
 }
 

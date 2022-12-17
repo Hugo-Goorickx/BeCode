@@ -1,96 +1,53 @@
 import {test} from './Produit.js';
 
-/** Change l'image en focntion du sens dans le quel on va (1 = doite | -1 = gauche)
- *  Details:
- *      1       Se place la ou va ajouter l'iamge
- *      2       Supprime l'ancienne image
- *      3       Ajoute le deplacement
- *      4       Si l'index est plus petit que 0 alors on remet a la fin du tableau
- *              [0, 1, 2, 3]
- *               0   =>   3
- *      5       Si l'index est plus grand que la taille du tableau alors on remet au debut du tableau
- *              [0, 1, 2, 3]
- *               0   <=   3
- *      6       On genere la nouvelle image   
- *
- *  Params:
- *      move    =>  Valeur de declage (1 droite | -1 gauche)
- * 
- *  Return:
- *      Rien
+/** 
+ * Change l'image en focntion du sens dans le quel on va (1 = doite | -1 = gauche)
  */
 function move_car_up(move)
 {
-    let pos_old_pic = document.getElementsByClassName('item_carrousel')[0]; //1
-    pos_old_pic.remove(); //2
-    index_carrousel = index_carrousel + move; //3
-    if (index_carrousel < 0) //4
+    let pos_old_pic = document.getElementsByClassName('item_carrousel')[0];
+    pos_old_pic.remove();
+    index_carrousel = index_carrousel + move;
+    if (index_carrousel < 0)
         index_carrousel = all_prod.length + move;
-    else if (index_carrousel == all_prod.length) //5
+    else if (index_carrousel == all_prod.length)
         index_carrousel = 0;
-    all_prod[index_carrousel].gen_picture(); //6
+    all_prod[index_carrousel].gen_picture();
 }
 
-/** Change l'image en focntion du sens dans le quel on va (1 = doite | -1 = gauche)
- *  Details:
- *      1       Se place la ou va ajouter l'iamge
- *      2       Supprime l'ancienne image
- *      3       Ajoute le deplacement
- *      4       Si l'index est plus petit que 0 alors on remet a la fin du tableau
- *              [0, 1, 2, 3]
- *               0   =>   3
- *      5       Si l'index est plus grand que la taille du tableau alors on remet au debut du tableau
- *              [0, 1, 2, 3]
- *               0   <=   3
- *      6       On genere la nouvelle image
- *      7       Ajoute l'event show_cat pour afficher les produits de sa categorie
- *
- *  Params:
- *      move    =>  Valeur de declage (1 droite | -1 gauche)
- * 
- *  Return:
- *      Rien
+/** 
+ * Change l'image en focntion du sens dans le quel on va (1 = doite | -1 = gauche)
  */
 function move_car_down(move)
 {
-    let pos_old_button = document.getElementsByClassName('menu'); //1
+    let pos_old_button = document.getElementsByClassName('menu'); 
     while (pos_old_button.length)
-        pos_old_button[0].remove(); //2
+        pos_old_button[0].remove(); 
     console.log("test" + index_button);
-    index_button = index_button + move; //3
-    if(index_button < 0) //4
+    index_button = index_button + move; 
+    if(index_button < 0) 
         index_button = all_categories.length + move;
-    else if (index_button >= all_categories.length) //5
+    else if (index_button >= all_categories.length) 
         index_button = 0;
     console.log("test" + index_button);
 
-    all_categories[index_button].gen_button(); //6
-    let pos_button = document.getElementsByClassName('menu')[0];//7
+    all_categories[index_button].gen_button(); 
+    let pos_button = document.getElementsByClassName('menu')[0];
     pos_button.addEventListener("click", show_cat);
 }
 
-/** Ajoute les articles de la bonne categories
- *  Details:
- *      1       Prends la position ou nous allons ajouter les produits
- *      2       Extrait son nom
- *      3       Supprime les anciens produits
- *      4       Ajoute les nouvelles cartes
- * 
- *  Params:
- *      Rien
- * 
- *  Return:
- *      Rien
+/** 
+ * Ajoute les articles de la bonne categories
  */
 function show_cat()
 {
-    let pos_old_article = document.getElementsByClassName('article'); //1
-    let name_cat = all_categories[index_button].name; //2
+    let pos_old_article = document.getElementsByClassName('article');
+    let name_cat = all_categories[index_button].name;
 
-    while (pos_old_article.length != 0) //3
+    while (pos_old_article.length != 0)
         pos_old_article[0].remove();
 
-    for (let elem of all_prod) //4
+    for (let elem of all_prod)
         for (let single_cat of elem.category)
             if (single_cat == name_cat)
                 elem.gen_card();
@@ -125,38 +82,26 @@ function create_bal(balise, content)
     return (tmp);
 }
 
-/** Renvoi les produits achetes et la somme totale
- *  Details:
- *      1       Cache l'interieur du menu burger
- *      2       Selectionne l'endroit ou la commande va etre achetee
- *      3       Supprime les anciennes commandes
- *      4       Cree les nouvelles commandes
- *      5       Genere les nouveaux produits
- *      6       Genere le prix total
- *      7       Genere le bouton d'achat
- *      8       Ajoute l'ensemble a l'HTML
- *  Params:
- *      Rien
- * 
- *  Return:
- *      Rien
+
+/** 
+ * Renvoi les produits achetes et la somme totale
  */
 function show_order()
 {
-    if (window.innerWidth < 1025) //1
+    if (window.innerWidth < 1025)
         document.getElementById("myLinks").style.display = "none";
 
-    let pos_body = document.body; //2
+    let pos_body = document.body;
     let pos_content = document.getElementsByClassName("content")[0];
 
-    let order = document.getElementsByClassName("commande")[0]; //3
+    let order = document.getElementsByClassName("commande")[0];
     if (order)
         order.remove();
 
-    order = create_bal('div', 'commande'); //3
+    order = create_bal('div', 'commande');
 
     let tmp_food, tmp_img, tmp_img1, tmp_img2, tmp_info, tmp_p, tmp_content, tmp_but, somme = 0;
-    for (let elem of test) //4
+    for (let elem of test)
     {
         somme += parseInt(elem.price * elem.nb_prod);
         tmp_food = create_bal('div', 'food_content');
@@ -201,27 +146,27 @@ function show_order()
         tmp_food.appendChild(tmp_img2);
         order.appendChild(tmp_food);
     }
-    tmp_p = create_bal('p', 'prix_complet'); //5
+    tmp_p = create_bal('p', 'prix_complet');
     tmp_content = document.createTextNode("Total:  " + somme + "$");
     tmp_p.appendChild(tmp_content);
     
     let tmp_total = create_bal('div', 'total');
     tmp_total.appendChild(tmp_p);
 
-    tmp_but = create_bal('button', 'buy'); //7
+    tmp_but = create_bal('button', 'buy');
     tmp_p = document.createElement('p')
     tmp_content = document.createTextNode('Order');
-    tmp_p.appendChild(tmp_content); //8
+    tmp_p.appendChild(tmp_content);
     
     tmp_but.appendChild(tmp_p);
     tmp_but.addEventListener('click', function(){window.alert("Commande validee")});
 
     tmp_total.appendChild(tmp_but);
     
-    tmp_but = create_bal('button', 'exit'); //7
+    tmp_but = create_bal('button', 'exit');
     tmp_p = document.createElement('p')
     tmp_content = document.createTextNode('Exit');
-    tmp_p.appendChild(tmp_content); //8
+    tmp_p.appendChild(tmp_content);
     
     tmp_but.appendChild(tmp_p);
     tmp_but.addEventListener('click', function(){document.getElementsByClassName("commande")[0].remove()});

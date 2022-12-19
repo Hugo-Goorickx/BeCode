@@ -166,9 +166,17 @@ document.body.onload = function() {onLoadHandler ()};
 document.getElementById("b1").onclick = function() {up ()};
 document.getElementById("b2").onclick = function() {down ()};
 
-//import and setup all datas from json file
-import myJson from '../test.json' assert {type: 'json'};
 
 let all_img = [];
-for (let elem of myJson.collection)
+
+const fetchName = () => fetch('../test.json');
+
+fetchName()
+	.then((response) => response.json())
+	.then((json) => {
+		for (let elem of json.collection)
     all_img.push(new Card(elem.Title, elem.Plot, elem.Real, elem.Cast, elem.Date, elem.Metascore, elem.Boxoffice, elem.img, elem.video));
+	})
+	.catch((error) => {
+		console.log("There was an error!", error);
+	});

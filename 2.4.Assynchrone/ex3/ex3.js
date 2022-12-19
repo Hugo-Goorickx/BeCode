@@ -1,4 +1,8 @@
 async function getResponse() {
+    document.getElementById("main").style.display = "none";
+
+    document.getElementById("animate").style.display = "flex";
+
 	const response = await fetch(
 		'https://thatsthespir.it/api',
 		{
@@ -37,9 +41,11 @@ async function getResponse() {
 
         newArt.append(newAuthor, newAge, newSpan);
     newDiv.append(newDivBackground, newArt);
-    let main = document.body;
+    let main = document.getElementById("main");
+    main.style.display = "block";
     main.textContent="";
     main.appendChild(newDiv);
+    document.getElementById("animate").style.display = "none";
     document.getElementById("genCit").addEventListener("click", getResponse);
 }
 

@@ -74,14 +74,13 @@ body
     }
 }
 
-.animate {
+.animate
+{
 	display:flex;
 	justify-content: center;
 	align-items: center;
 	height:100%;
 	margin: auto;
-/* 	width: 350px; */
-/* 	font-size:26px; */
 	font-family: Helvetica, sans-serif, Arial;
 	text-shadow: 0 0 1px white;
 }

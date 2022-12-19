@@ -1,10 +1,10 @@
 function loadAPI()
 {
-    let inputName = document.getElementById("name").value; 
-    let inputCountry = document.getElementById("country").value; 
+    let inputName = document.getElementById("name").value;
+    let inputCountry = document.getElementById("country").value;
     let tmp = [];
     const fetchName = (name, country) => fetch("https://api.agify.io/?name=" + name + "&country_id=" + country);
-    
+
     fetchName(inputName, inputCountry)
         .then((response) => response.json())
         .then((json) => {

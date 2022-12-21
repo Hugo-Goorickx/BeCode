@@ -393,9 +393,10 @@ function convertDayByDay(listTmp, stock)
                 if (tmpVar < elem)
                     tmpVar = elem;
             tmpGlobal.push(new Formulaire(actuelle, ((totalTemp/compteur).toFixed(2)), stock.city.name, weatherName[weather.indexOf(tmpVar)]));
-            compteur = totalTemp = 0;
-            actuelle = "";
-            meteo =[];
+            compteur = 1;
+            totalTemp = elem.degre;
+            actuelle = elem.date;
+            meteo = [];
             weather = [0, 0, 0, 0 ,0, 0, 0, 0, 0];
         }
     }
@@ -405,6 +406,11 @@ async function catchData()
 {
     let city;
     
+    if (document.getElementById('allCity').value == 'default' && !document.getElementById('ville').value)
+    {
+        window.alert("il manque la ville");
+        return;
+    }
     if (document.getElementById('allCity').value == 'default')
     {
         let x = 0;
@@ -425,7 +431,7 @@ async function catchData()
     }
     else
         city = document.getElementById('allCity').value;
-    document.getElementById('allCity').value = '';
+    document.getElementById('ville').value = '';
     if (listCity)
     {
         input.innerHTML = '<option value="default">default</option>';
@@ -434,8 +440,8 @@ async function catchData()
     }
     const response = await fetch(
     	`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=18e2a500fc89261ec307dc715194695d&units=metric`,
-     {
-     	method: 'GET'
+        {
+     	    method: 'GET'
     	});
     let stock = await response.json();
     let listTmp = [];

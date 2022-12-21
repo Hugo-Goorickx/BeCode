@@ -17,18 +17,16 @@
     width: 100vw;
 }
 
-.arrow
+nav
 {
-    width: 5vw;
-    height: 5vw;
-    background-color: transparent;
-    border: none;
-    margin-left: 2vw;
-    margin-right: 2vw;
-    img
+    margin-top: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    *
     {
-        width: 5vw;
-        height: 5vw;
+        margin-left: 1vw;
+        margin-right: 1vw;
     }
 }
 
@@ -51,10 +49,78 @@ html
     background: #eee;
 }
 
+.insideBox
+{
+    select
+    {
+        border-radius: 10vw;
+        background-color: #0563af;
+        font-family: Quicksand;
+        color: white;
+        padding: 12px;
+        width: 10vw;
+        border: none;
+        font-size: 20px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+        -webkit-appearance: button;
+        appearance: button;
+        outline: none;
+    }
+    
+    &::before
+    {
+        content: "\f13a";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 20%;
+        height: 100%;
+        text-align: center;
+        font-size: 28px;
+        line-height: 45px;
+        color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0.1);
+        pointer-events: none;
+    }
+    
+    &:hover::before
+    {
+        color: rgba(255, 255, 255, 0.6);
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    select option
+    {
+        padding: 30px;
+    }
+  }
+  
+
+button {
+	background-color:#9cbced;
+	border-radius:28px;
+	border:1px solid #d3d8e0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+    &:hover {
+        background-color:#6892b3;
+    }
+    &:active {
+        position:relative;
+        top:1px;
+    }
+}
+
 .box 
 {
     width: 20vw;
-    height: 30vh;
+    height: 15vh;
     border-radius: 5px;
     box-shadow: 0 2px 30px rgba(black, 0.2);
     background: darken(#eff3f9,20%);
